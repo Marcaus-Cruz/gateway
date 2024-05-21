@@ -1,0 +1,13 @@
+@import "../mixins.scss";
+
+.header {
+  @include flex-container(column, nowrap, center, center);
+  font-size: 2vmin;
+  color: white;
+  background-color: #282c34;
+  min-height: 100vh;
+}
+
+.link {
+  color: #61dafb;
+}

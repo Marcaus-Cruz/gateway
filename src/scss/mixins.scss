@@ -1,0 +1,26 @@
+@mixin flex-container($direction: row, $wrap: nowrap, $justify: null, $align: null) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+/*
+* Usage: @include hover(((background-color, white), (color, black)));
+*
+*/
+@mixin hover($styles...) {
+    @debug $styles;
+	// * For each property, apply styles
+	&:hover,
+	&:focus,
+	&:active {
+		@for $style from 1 through length($styles) {
+			$propertyName: nth($style, 1);
+			$propertyValue:nth($style, 2);
+
+			#{$propertyName}: $propertyValue;
+		}
+	}
+}

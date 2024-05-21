@@ -1,0 +1,16 @@
+@import '../mixins.scss';
+
+.btn {
+	color: white;
+	border: 0.5vmin solid white;
+	background-color: black;
+
+	// @include hover(((background-color, white), (border-color, black), (color, black)));
+	&:hover,
+	&:focus,
+	&:active {
+		color: black;
+		border-color: black;
+		background-color: white;
+	}
+}
