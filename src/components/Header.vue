@@ -1,11 +1,11 @@
 <template>
     <div class="header">
-        <Title text="Gateway" />
+        <Logo text="Gateway" imageUrl="src/assets/MClogoWhite.png" />
     </div>
 </template>
 
-<script setup lang="ts">
-    import Title from './Title.vue';
+<script setup>
+    import Logo from './ImageWithText.vue';
 </script>
 
 <style scoped>

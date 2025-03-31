@@ -1,15 +1,15 @@
-<template>
-  <Header />
-</template>
-
-
-<script setup lang="ts">
-import Header from "./components/Header.vue";
+<script setup>
+    import Header from '@/components/Header.vue';
+    import { RouterView } from 'vue-router';
 </script>
 
+<template>
+    <Header />
+    <RouterView />
+</template>
 
 <style scoped>
-#app {
-  background-color: #7fb57f;
-}
+    #app {
+        background-color: #7fb57f;
+    }
 </style>
