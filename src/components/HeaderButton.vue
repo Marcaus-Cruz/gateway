@@ -26,13 +26,13 @@
 
 <style scoped>
     .header-button {
-        padding: 0.5rem 1rem;
-        margin: 0 0.5rem;
-        border-radius: 4px;
-        color: white;
+        border-radius: 0.1em;
+        padding: 0.5em 1em;
+        margin: auto 1vmin;
+
+        color: var(--color-primary);
         text-decoration: none;
-        font-weight: 500;
-        transition: background-color 0.3s;
+        transition: all 0.25s;
         background: none;
         border: none;
         cursor: pointer;
@@ -41,9 +41,11 @@
 
     .header-button:hover {
         background-color: rgba(255, 255, 255, 0.2);
+        color: var(--color-hover);
     }
 
     .header-button.active {
-        background-color: rgba(255, 255, 255, 0.3);
+        color: white;
+        /* pointer-events: none; */
     }
 </style>

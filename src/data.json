@@ -1,0 +1,14 @@
+{
+    "views": {
+        "homeview": {
+            "chunks": ["components.AboutMe"]
+        }
+    },
+    "components": {
+        "AboutMe": {
+            "textSection": {
+                "subttext": "Hi, my name's Marcaus and I'm glad you stumbled across my page."
+            }
+        }
+    }
+}

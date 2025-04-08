@@ -1,6 +1,9 @@
 <template>
     <div class="header">
-        <Logo text="Gateway" imageUrl="src/assets/MClogoWhite.png" />
+        <RouterLink to="/">
+            <Logo imageUrl="src/assets/MCLogoWhite.png" :styles="logoStyles" />
+        </RouterLink>
+
         <div class="nav-buttons">
             <HeaderButton text="Home" route="/" />
             <HeaderButton text="Experience" route="/experience" />
@@ -11,38 +14,32 @@
 <script setup>
     import Logo from './ImageWithText.vue';
     import HeaderButton from './HeaderButton.vue';
+    import { RouterLink } from 'vue-router';
+
+    const logoStyles = {
+        heightOfParent: { parentSelector: '.header', proportion: 1 },
+    };
 </script>
 
 <style scoped>
     .header {
-        position: fixed;
+        position: sticky;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100vw;
         height: 10vh;
-        padding: 1em;
+        padding: 0 10%;
 
         top: 0;
         left: 0;
 
-        color: white;
-        background-color: #7fb57f;
+        background-color: var(--color-hover);
+        color: var(--color-accent);
     }
 
     .nav-buttons {
         display: flex;
         align-items: center;
-    }
-
-    .btn-header {
-        color: black;
-        border: 0.5vmin solid black;
-        background-color: #7fb57f;
-    }
-
-    .btn-header.active {
-        color: white;
-        border-color: white;
     }
 </style>

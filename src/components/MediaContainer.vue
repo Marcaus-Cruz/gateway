@@ -37,17 +37,16 @@
                         element.parentElement;
                     const { clientWidth: myWidth, clientHeight: myHeight } = element;
 
-                    // console.log({ element, parentWidth, parentHeight, myWidth, myHeight });
-
                     if (myWidth > parentWidth) {
                         element.style.width = `${parentWidth}px`;
-                        element.classList.add('resized-width');
+                        // element.classList.add('resized');
                     }
                     if (myHeight > parentHeight) {
                         element.style.height = `${parentHeight}px`;
-                        element.classList.add('resized-height');
+                        // element.classList.add('resized');
                     }
 
+                    element.classList.add('resized'); // even if not so we can show
                     return wait();
                 }),
             wait()
@@ -56,5 +55,14 @@
 
 <style scoped>
     .media-container {
+    }
+
+    img {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
+    }
+
+    img.resized {
+        opacity: 1;
     }
 </style>
