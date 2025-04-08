@@ -42,10 +42,10 @@
     .header-button:hover {
         background-color: rgba(255, 255, 255, 0.2);
         color: var(--color-hover);
+        scale: 1.1;
     }
 
     .header-button.active {
         color: white;
-        /* pointer-events: none; */
     }
 </style>
