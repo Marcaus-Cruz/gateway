@@ -1,4 +1,5 @@
 <template>
+    <transition></transition>
     <div ref="header" class="header">
         <RouterLink ref="logo" to="/">
             <Logo class="logo" imageUrl="src/assets/MCLogoWhite.png" :styles="logoStyles" />
@@ -26,7 +27,7 @@
         gsap.fromTo(
             header.value,
             { height: '0vh' },
-            { height: '10vh', duration: 0.75, ease: 'power1.inOut' }
+            { height: 'var(--header-height)', duration: 0.75, ease: 'power1.inOut' }
         );
         gsap.fromTo(
             targets,
@@ -63,7 +64,7 @@
         justify-content: space-between;
         align-items: center;
         width: 100vw;
-        height: 10vh;
+        height: var(--header-height);
         padding: 0 10%;
 
         top: 0;

@@ -10,6 +10,6 @@
 
 <style scoped>
     #app {
-        background-color: var(--color-background);
+        /* background-color: var(--color-hover); */
     }
 </style>
