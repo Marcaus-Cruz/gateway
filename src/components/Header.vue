@@ -1,11 +1,16 @@
 <template>
     <div class="header">
         <Logo text="Gateway" imageUrl="src/assets/MClogoWhite.png" />
+        <div class="nav-buttons">
+            <HeaderButton text="Home" route="/" />
+            <HeaderButton text="Experience" route="/experience" />
+        </div>
     </div>
 </template>
 
 <script setup>
     import Logo from './ImageWithText.vue';
+    import HeaderButton from './HeaderButton.vue';
 </script>
 
 <style scoped>
@@ -23,5 +28,21 @@
 
         color: white;
         background-color: #7fb57f;
+    }
+
+    .nav-buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-header {
+        color: black;
+        border: 0.5vmin solid black;
+        background-color: #7fb57f;
+    }
+
+    .btn-header.active {
+        color: white;
+        border-color: white;
     }
 </style>

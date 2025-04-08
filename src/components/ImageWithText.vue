@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <MediaContainer :src="imageUrl" :alt="'logo'" />
-        <h1>{{ text }}</h1>
+        <div>{{ text }}</div>
     </div>
 </template>
 
 <script setup>
-    import { defineProps, onMounted } from 'vue';
     import MediaContainer from '@/components/MediaContainer.vue';
+    import { defineProps } from 'vue';
 
     defineProps({
         text: { type: String, default: 'Hello World' },

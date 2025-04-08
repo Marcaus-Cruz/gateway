@@ -1,7 +1,11 @@
+<template>
+    <section>
+        <ImageWithText :text="'Home'" />
+    </section>
+</template>
+
 <script setup>
-    import Title from '@/components/Title.vue';
+    import ImageWithText from '@/components/ImageWithText.vue';
 </script>
 
-<template>
-    <Title :text="'Home'" />
-</template>
+<style scoped></style>

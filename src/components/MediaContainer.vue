@@ -1,9 +1,15 @@
+<template>
+    <div ref="container" class="media-container">
+        <img v-if="mediaType === 'img' && src" ref="image" :src="src" :alt="alt" />
+    </div>
+</template>
+
 <script setup>
     import { defineProps, onMounted, ref } from 'vue';
     import { wait } from '../utilities/general';
 
     defineProps({
-        src: { type: String },
+        src: { type: String, default: '' },
         alt: { type: String },
         title: { type: String },
         description: { type: String },
@@ -14,10 +20,12 @@
     const image = ref();
 
     onMounted(() => {
-        if (image.value.complete) {
-            resize();
-        } else {
-            image.value.onload = () => resize();
+        if (image.value) {
+            if (image.value.complete) {
+                resize();
+            } else {
+                image.value.onload = () => resize();
+            }
         }
     });
 
@@ -29,7 +37,7 @@
                         element.parentElement;
                     const { clientWidth: myWidth, clientHeight: myHeight } = element;
 
-                    console.log({ element, parentWidth, parentHeight, myWidth, myHeight });
+                    // console.log({ element, parentWidth, parentHeight, myWidth, myHeight });
 
                     if (myWidth > parentWidth) {
                         element.style.width = `${parentWidth}px`;
@@ -45,12 +53,6 @@
             wait()
         );
 </script>
-
-<template>
-    <div ref="container" class="media-container">
-        <img v-if="mediaType === 'img' && src" ref="image" :src="src" :alt="alt" />
-    </div>
-</template>
 
 <style scoped>
     .media-container {
