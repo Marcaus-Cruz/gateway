@@ -1,96 +1,46 @@
 <template>
-    <section class="view home">
-        <!-- <div ref="myImage" class="me">
-            <ImageWithText imageUrl="/src/assets/img/marcaus.jpg" alt="Marcaus Cruz" />
-        </div> -->
-        <img ref="myImage" class="me" src="/src/assets/img/marcaus.jpg" alt="Marcaus Cruz" />
-        <Transition name="bounce">
-            <h1 v-if="showText" ref="textSection" @click="toggleShowText">
-                Hi, my name is Marcaus Cruz.
-            </h1>
-        </Transition>
+    <section>
+        <span>HOME</span>
+        <div class="cards">
+            <ThumbnailCard class="thumbnail" mediaUrl="/src/assets/img/marcaus.jpg" type="image">
+                About Me
+            </ThumbnailCard>
+            <ThumbnailCard class="thumbnail" mediaUrl="/src/assets/img/marcaus.jpg" type="image">
+                Professional Experience
+            </ThumbnailCard>
+            <ThumbnailCard class="thumbnail" mediaUrl="/src/assets/img/marcaus.jpg" type="image">
+                Personal Projects
+            </ThumbnailCard>
+        </div>
     </section>
 </template>
 
 <script setup>
     import { gsap } from 'gsap';
     import { onMounted, ref } from 'vue';
-
-    const showPage = ref(false);
-    const showText = ref(false);
-    const textSection = ref();
-    const myImage = ref();
-
-    const toggleShowPage = () => {
-        showPage.value = !showPage.value;
-        return showPage.value;
-    };
-
-    const toggleShowText = () => {
-        showText.value = !showText.value;
-        return showText.value;
-    };
-
-    const timeline = gsap.timeline({ paused: true });
-
-    onMounted(() => {
-        timeline
-            .fromTo(
-                myImage.value,
-                { x: '-100vw', opacity: 0 },
-                {
-                    opacity: 1,
-                    duration: 1,
-                    x: '0vw',
-                    ease: 'ease.in',
-                },
-                '<'
-            )
-            .play()
-            .then(() => (showText.value = true));
-    });
+    import ThumbnailCard from '../components/ThumbnailCard.vue';
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     section {
-        text-shadow: 0.1em 0.1em 0.1em black;
-        margin: auto var(--header-margin-x);
-        background-color: var(--color-accent);
-
         display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-
         flex-direction: column;
-        height: calc(100vh - var(--header-height));
-    }
+        background-color: var(--color-accent);
+        margin: auto var(--header-margin-x);
 
-    .me {
-        max-width: 40vmin;
-        max-height: 40vmin;
-        margin: 5vmin;
-        box-shadow: 0.1em 0.1em 0.1em black;
-    }
-
-    .bounce-enter-active {
-        animation: bounce-in 1s;
-    }
-
-    .bounce-leave-active {
-        animation: bounce-in 1s reverse;
-    }
-
-    @keyframes bounce-in {
-        0% {
-            opacity: 0;
-            transform: scale(0);
+        span {
+            margin: 3vmin auto;
+            font-size: 3vmin;
         }
-        50% {
-            transform: scale(1.25);
-        }
-        100% {
-            opacity: 1;
-            transform: scale(1);
+
+        .cards {
+            display: flex;
+
+            .thumbnail {
+                flex: 1 1 33%;
+                height: 30vh;
+                margin: 3vmin;
+            }
         }
     }
 </style>
