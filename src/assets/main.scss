@@ -1,4 +1,24 @@
-// @import './base.scss';
+@import './common.scss';
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url('../../public/fonts/Montserrat\ Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Black';
+    src: url('../../public/fonts/Montserrat\ Black.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Medium';
+    src: url('../../public/fonts/Montserrat\ Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url('../../public/fonts/Montserrat\ Regular.ttf');
+}
 
 body {
     font-family:
