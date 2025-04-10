@@ -1,22 +1,21 @@
 <template>
     <div class="header">
         <RouterLink to="/">
-            <img src="/src/assets/MCLogoWhite.png" alt="logo" />
+            <img class="logo" src="/src/assets/MCLogoWhite.png" alt="logo" />
         </RouterLink>
 
         <div class="nav-buttons">
             <HeaderButton route="/">Home</HeaderButton>
             <HeaderButton route="/experience">Experience</HeaderButton>
+            <HeaderButton route="/projects">Projects</HeaderButton>
+            <HeaderButton route="/contact">Contact</HeaderButton>
         </div>
     </div>
 </template>
 
 <script setup>
-    import Logo from './ImageWithText.vue';
     import HeaderButton from './HeaderButton.vue';
     import { RouterLink } from 'vue-router';
-    import { gsap } from 'gsap';
-    import { onMounted, ref } from 'vue';
 </script>
 
 <style scoped>
@@ -27,7 +26,7 @@
         align-items: center;
         width: 100vw;
         height: var(--header-height);
-        padding: 0 10%;
+        padding: 0.5% 1% 0% 10%;
 
         top: 0;
         left: 0;
@@ -37,7 +36,7 @@
         overflow: hidden;
     }
 
-    img {
+    .logo {
         max-height: var(--header-height);
         max-width: var(--header-height);
     }
@@ -52,7 +51,7 @@
     }
 
     a:hover,
-    a:hover img {
+    a:hover .logo {
         scale: 1.2;
     }
 </style>
