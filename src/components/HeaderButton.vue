@@ -20,7 +20,7 @@
     const isActive = computed(() => currentRoute.path === props.route);
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .header-button {
         border-radius: 0.1em;
         padding: 0.5em 1em;

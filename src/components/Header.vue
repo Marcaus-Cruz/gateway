@@ -18,7 +18,7 @@
     import { RouterLink } from 'vue-router';
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .header {
         position: sticky;
         display: flex;

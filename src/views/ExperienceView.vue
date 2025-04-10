@@ -11,7 +11,7 @@
     import ImageWithText from '@/components/ImageWithText.vue';
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     .experience-container {
         padding: 20px;
         margin-top: 20px;

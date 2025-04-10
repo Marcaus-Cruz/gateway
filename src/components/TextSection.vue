@@ -12,7 +12,7 @@
     });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
     section {
         display: flex;
         justify-content: center;
