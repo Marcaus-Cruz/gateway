@@ -1,13 +1,12 @@
 <template>
-    <transition></transition>
-    <div ref="header" class="header">
-        <RouterLink ref="logo" to="/">
-            <Logo class="logo" imageUrl="src/assets/MCLogoWhite.png" :styles="logoStyles" />
+    <div class="header">
+        <RouterLink to="/">
+            <img src="/src/assets/MCLogoWhite.png" alt="logo" />
         </RouterLink>
 
         <div class="nav-buttons">
-            <HeaderButton text="Home" route="/" />
-            <HeaderButton text="Experience" route="/experience" />
+            <HeaderButton route="/">Home</HeaderButton>
+            <HeaderButton route="/experience">Experience</HeaderButton>
         </div>
     </div>
 </template>
@@ -18,43 +17,6 @@
     import { RouterLink } from 'vue-router';
     import { gsap } from 'gsap';
     import { onMounted, ref } from 'vue';
-
-    const header = ref();
-    const logo = ref();
-
-    onMounted(() => {
-        const targets = document.querySelectorAll('.nav-buttons');
-        gsap.fromTo(
-            header.value,
-            { height: '0vh' },
-            { height: 'var(--header-height)', duration: 0.75, ease: 'power1.inOut' }
-        );
-        gsap.fromTo(
-            targets,
-            { opacity: 0, x: '100%', duration: 1 },
-            {
-                opacity: 1,
-                x: '0%',
-                duration: 1,
-                ease: 'power1.inOut',
-            }
-        );
-        gsap.fromTo(
-            logo.value,
-            { opacity: 0, x: '-100%', duration: 1 },
-            {
-                opacity: 1,
-                x: '0%',
-                duration: 1,
-                ease: 'power1.inOut',
-                delay: 2,
-            }
-        );
-    });
-
-    const logoStyles = {
-        heightOfParent: { parentSelector: '.header', proportion: 1 },
-    };
 </script>
 
 <style scoped>
@@ -75,6 +37,11 @@
         overflow: hidden;
     }
 
+    img {
+        max-height: var(--header-height);
+        max-width: var(--header-height);
+    }
+
     .nav-buttons {
         display: flex;
         align-items: center;
@@ -84,7 +51,8 @@
         transition: all 0.5s ease;
     }
 
-    a:hover {
+    a:hover,
+    a:hover img {
         scale: 1.2;
     }
 </style>

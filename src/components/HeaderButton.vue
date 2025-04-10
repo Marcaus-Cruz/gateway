@@ -1,6 +1,6 @@
 <template>
     <RouterLink :to="route" class="header-button" :class="{ active: isActive }">
-        {{ text }}
+        <slot></slot>
     </RouterLink>
 </template>
 
@@ -11,10 +11,6 @@
     const currentRoute = useRoute();
 
     const props = defineProps({
-        text: {
-            type: String,
-            required: true,
-        },
         route: {
             type: String,
             required: true,

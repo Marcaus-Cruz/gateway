@@ -59,7 +59,7 @@
 
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        align-items: flex-start;
 
         flex-direction: column;
         height: calc(100vh - var(--header-height));
