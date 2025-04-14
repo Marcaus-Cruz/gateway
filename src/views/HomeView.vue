@@ -34,6 +34,7 @@
         }
 
         .cards {
+            position: relative;
             display: flex;
 
             .thumbnail {

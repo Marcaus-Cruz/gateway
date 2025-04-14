@@ -33,8 +33,8 @@
         transition: all 0.25s ease-in-out;
 
         .thumbnail-card-media {
-            position: relative;
             @include absolute-center();
+            display: flex;
             opacity: 0;
             z-index: 1;
 
@@ -43,6 +43,7 @@
             > * {
                 max-width: 100%;
                 max-height: 100%;
+                margin: auto;
             }
         }
 
