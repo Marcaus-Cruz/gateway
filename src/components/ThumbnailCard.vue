@@ -1,15 +1,15 @@
 <template>
     <button
         class="thumbnail-card"
-        :class="mediaType"
+        :class="type"
         @click="$emit('click')"
         @mouseenter="$emit('thumbnailCardMouseEnter')"
         @mouseleave="$emit('thumbnailCardMouseLeave')"
         :style="style"
     >
         <div class="thumbnail-card-media">
-            <img v-if="mediaType === MEDIA_TYPES.img" :src="mediaUrl" :alt="alt" />
-            <vid v-else-if="mediaType === MEDIA_TYPES.vid" :src="mediaUrl" :alt="alt" />
+            <img v-if="type === MEDIA_TYPES.img" :src="mediaUrl" :alt="alt" />
+            <vid v-else-if="type === MEDIA_TYPES.vid" :src="mediaUrl" :alt="alt" />
         </div>
         <div class="title">
             <slot></slot>
@@ -23,7 +23,7 @@
     const MEDIA_TYPES = Object.freeze({ img: 'image', vid: 'video' });
     const props = defineProps({
         mediaUrl: { type: String, default: '/src/assets/MCLogoBlack.png' },
-        mediaType: { type: String, default: 'image' },
+        type: { type: String, default: 'image' },
         alt: { type: String },
         style: { type: Object },
     });
