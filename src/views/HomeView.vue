@@ -1,27 +1,17 @@
+<!-- v-for="({ text, mediaUrl, mediaType, style = {} }, index) in thumbnails" -->
 <template>
     <section>
         <span>HOME</span>
         <div class="cards">
             <ThumbnailCard
+                v-for="(thumbnail, index) in thumbnails"
+                :key="index"
+                :style="thumbnail.style"
+                :mediaType="thumbnail.mediaType"
+                :mediaUrl="thumbnail.mediaUrl"
                 class="thumbnail"
-                mediaUrl="/src/assets/img/thumb-aboutMe.jpg"
-                type="image"
             >
-                About Me
-            </ThumbnailCard>
-            <ThumbnailCard
-                class="thumbnail"
-                mediaUrl="/src/assets/img/thumb-experience.png"
-                type="image"
-            >
-                Professional Experience
-            </ThumbnailCard>
-            <ThumbnailCard
-                class="thumbnail"
-                mediaUrl="/src/assets/img/thumb-projects.png"
-                type="image"
-            >
-                Personal Projects
+                {{ thumbnail.text }}
             </ThumbnailCard>
         </div>
     </section>
@@ -31,6 +21,35 @@
     import { gsap } from 'gsap';
     import { onMounted, ref } from 'vue';
     import ThumbnailCard from '../components/ThumbnailCard.vue';
+
+    const randomAnimStyles = () => ({
+        animationDelay: `${Math.random() * 2}s`,
+        animationDuration: `${3 + Math.random()}s`,
+        animationTimingFunction: 'ease-in-out',
+        animationIterationCount: 'infinite',
+        animationName: 'rotateY',
+    });
+
+    const thumbnails = ref([
+        {
+            text: 'About Me',
+            mediaUrl: '/src/assets/img/thumb-aboutMe.jpg',
+            mediaType: 'image',
+            style: randomAnimStyles(),
+        },
+        {
+            text: 'Professional Experience',
+            mediaUrl: '/src/assets/img/thumb-experience.png',
+            mediaType: 'image',
+            style: randomAnimStyles(),
+        },
+        {
+            text: 'Personal Projects',
+            mediaUrl: '/src/assets/img/thumb-projects.png',
+            mediaType: 'image',
+            style: randomAnimStyles(),
+        },
+    ]);
 </script>
 
 <style scoped lang="scss">

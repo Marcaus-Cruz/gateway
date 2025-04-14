@@ -20,6 +20,15 @@
     }
 }
 
+@keyframes rotateY {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
 @mixin absolute-center($position: absolute, $top: 0, $left: 0, $right: 0, $bottom: 0) {
     position: $position;
     top: $top;
