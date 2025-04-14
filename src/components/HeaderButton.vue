@@ -21,27 +21,27 @@
 </script>
 
 <style scoped lang="scss">
-    .header-button {
-        border-radius: 0.1em;
-        padding: 0.5em 1em;
-        margin: auto 1vmin;
+    // .header-button {
+    //     border-radius: 0.1em;
+    //     padding: 0.5em 1em;
+    //     margin: auto 1vmin;
 
-        color: var(--color-primary);
-        text-decoration: none;
-        transition: all 0.25s;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1em;
-    }
+    //     color: var(--color-primary);
+    //     text-decoration: none;
+    //     transition: all 0.25s;
+    //     background: none;
+    //     border: none;
+    //     cursor: pointer;
+    //     font-size: 1em;
+    // }
 
-    .header-button:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-        color: var(--color-hover);
-        scale: 1.1;
-    }
+    // .header-button:hover {
+    //     background-color: rgba(255, 255, 255, 0.2);
+    //     color: var(--color-hover);
+    //     scale: 1.1;
+    // }
 
-    .header-button.active {
-        color: white;
-    }
+    // .header-button.active {
+    //     color: white;
+    // }
 </style>
