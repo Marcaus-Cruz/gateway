@@ -18,7 +18,7 @@ export default defineConfig({
     css: {
         preprocessorOptions: {
             scss: {
-                additionalData: `@use "@/assets/common.scss" as *;`,
+                additionalData: `@use "@/assets/styles/common.scss" as *;`,
             },
         },
     },
