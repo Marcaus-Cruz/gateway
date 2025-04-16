@@ -3,8 +3,8 @@
         class="thumbnail-card"
         :class="type"
         @click="$emit('click')"
-        @mouseenter="$emit('thumbnailCardMouseEnter')"
-        @mouseleave="$emit('thumbnailCardMouseLeave')"
+        @mouseenter="$emit('importantFocus')"
+        @mouseleave="$emit('importantFocusOut')"
         :style="style"
     >
         <div class="thumbnail-card-media">
@@ -59,6 +59,7 @@
             font-size: 4vmin;
             text-align: center;
             opacity: 0;
+            color: var(--color-text);
 
             transition: all 0.25s ease-in-out;
             z-index: 2;
@@ -68,7 +69,7 @@
         &:focus,
         &:active {
             scale: 1.1;
-            border-color: black;
+            border-color: var(--color-text);
             animation-iteration-count: 1 !important;
             animation-play-state: paused;
 
