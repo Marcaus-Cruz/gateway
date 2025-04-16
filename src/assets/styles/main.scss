@@ -48,10 +48,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    --color-text: #ffffff;
     --color-primary: #156841;
     --color-secondary: #ffa931;
     --color-accent: #1f945d8c;
-    --color-background: #fff6ed;
+    --color-background: #000000;
     --color-hover: #27aa6d;
     --color-hover-secondary: #d96c06;
 
@@ -60,9 +61,10 @@ body {
 }
 
 #app {
-    font-family: 'Montserrat Bold', sans-serif;
+    font-family: 'Montserrat Regular', sans-serif;
     font-weight: normal;
     margin: 0 auto;
+    color: var(--color-text);
     background-color: var(--color-background);
 }
 
@@ -75,14 +77,13 @@ body {
 }
 
 .header-button {
-    font-family: 'Montserrat Bold', sans-serif;
     position: relative;
     @include flex-container(column);
     border-radius: 0.1em;
     padding: 0.5em 1em;
     margin: auto 1vmin;
 
-    color: var(--color-primary);
+    color: var(--color-text);
     text-decoration: none;
     transition: all 0.25s;
     background: none;
@@ -97,6 +98,7 @@ body {
     }
 
     &.active {
-        color: white;
+        color: var(--color-primary);
+        text-decoration: underline;
     }
 }
