@@ -56,8 +56,7 @@
         top: 0;
         left: 0;
 
-        background-color: var(--color-hover);
-        color: var(--color-accent);
+        background-color: var(--color-background);
     }
 
     .logo {
