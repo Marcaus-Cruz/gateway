@@ -77,7 +77,6 @@
 <style scoped lang="scss">
     .view {
         background-color: var(--color-background);
-        margin: auto var(--header-margin-x);
 
         span {
             margin: 3vmin auto;

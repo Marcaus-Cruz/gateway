@@ -68,6 +68,10 @@ body {
     background-color: var(--color-background);
 }
 
+.view {
+    margin: auto var(--header-margin-x);
+}
+
 *,
 *::before,
 *::after {

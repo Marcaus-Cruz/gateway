@@ -24,7 +24,7 @@
     });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .text-image-container {
         @include flex-container(row, nowrap, space-evenly, center);
 

@@ -1,12 +1,14 @@
 <template>
-    <section>
-        <div class="experience-container">
-            <p>This is the Experience page content.</p>
-        </div>
-    </section>
+    <div class="view">
+        <section class="experience-container">
+            <ExperienceEE />
+        </section>
+    </div>
 </template>
 
-<script setup></script>
+<script setup>
+    import ExperienceEE from '@/components/ExperienceEE.vue';
+</script>
 
 <style scoped lang="scss">
     .experience-container {
