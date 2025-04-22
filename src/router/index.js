@@ -17,6 +17,11 @@ const router = createRouter({
             component: ExperienceView,
         },
         {
+            path: '/experience/:id',
+            name: 'experienceItem',
+            component: ExperienceView,
+        },
+        {
             path: '/:catchAll(.*)',
             name: 'notFound',
             component: NotFoundView,
