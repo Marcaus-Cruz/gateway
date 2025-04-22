@@ -1,5 +1,6 @@
 {
     "ee": {
+        "organization": "ee",
         "mediaUrl": "/src/assets/img/icon-ee.png",
         "text": {
             "title": "Software Engineer (May 22 - March 25)",
@@ -16,12 +17,35 @@
         }
     },
     "caaml": {
+        "organization": "wwu",
         "mediaUrl": "/src/assets/img/icon-wwu.png",
         "text": {
             "title": "Frontend Engineer (Jan 21 - Dec 21)",
             "subtitle": "Instructor Efficiency Tool (CAAML Web Tool) - Western Washington University",
             "description": [
                 "Developed an interactive web tool using JavaScript, Node, and Express to visualize machine learning algorithm outputs, significantly enhancing instructor efficiency in class scheduling. As the lead on front-end development, I routed and styled all web pages using HTML, CSS, and JavaScript and designed dynamic D3 visualizations to improve usability and overall user experience. In addition, I simplified project workflows using Trello boards and Agile Scrum practices, ensuring consistent progress and alignment with client goals."
+            ]
+        }
+    },
+    "puf": {
+        "organization": "wwu",
+        "mediaUrl": "/src/assets/img/icon-wwu.png",
+        "text": {
+            "title": "Research Assistant (Oct 20 - Dec 21)",
+            "subtitle": "Research Assistant under Professor Tarek Idriss - Western Washington University",
+            "description": [
+                "Developed and tested multiple Python-based software models to simulate novel hardware security concepts. Designed and executed benchmarking scripts using machine learning techniques to evaluate performance on generated data. Utilized Weights & Biases (wandb) to record, visualize, and analyze results, comparing the effectiveness of implemented security measures against other types of Physical Unclonable Functions (PUFs)."
+            ]
+        }
+    },
+    "centurylink": {
+        "organization": "centurylink",
+        "mediaUrl": "/src/assets/img/icon-centurylink.png",
+        "text": {
+            "title": "Office Associate (Sep 16 - Sep 20)",
+            "subtitle": "Centurylink",
+            "description": [
+                "Supported company-wide data consolidation efforts during a multi-company merger by creating and importing digital files into internal databases using proprietary software. Managed the organization and preparation of employee and customer documents for secure archival shipment."
             ]
         }
     }
