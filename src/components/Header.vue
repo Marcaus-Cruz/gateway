@@ -6,10 +6,10 @@
 
         <div class="nav-buttons">
             <HeaderButton route="/">Home</HeaderButton>
-            <!-- <HeaderButton route="/experience">Experience</HeaderButton>
-            <HeaderButton route="/projects">Projects</HeaderButton> -->
-            <DropdownMenu route="/experience" :options="experienceOptions">Experience</DropdownMenu>
-            <DropdownMenu route="/projects" :options="projectOptions">Projects</DropdownMenu>
+            <HeaderButton route="/experience">Experience</HeaderButton>
+            <HeaderButton route="/projects">Projects</HeaderButton>
+            <!-- <DropdownMenu route="/experience" :options="experienceOptions">Experience</DropdownMenu>
+            <DropdownMenu route="/projects" :options="projectOptions">Projects</DropdownMenu> -->
             <HeaderButton route="/contact">Contact</HeaderButton>
         </div>
     </div>
