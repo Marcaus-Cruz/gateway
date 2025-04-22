@@ -1,7 +1,7 @@
 <!-- v-for="({ text, mediaUrl, mediaType, style = {} }, index) in thumbnails" -->
 <template>
     <div class="view">
-        <span>HOME</span>
+        <span class="view-title">HOME</span>
         <section class="hero">
             <TextImageContainer
                 :text="textImage.text"
