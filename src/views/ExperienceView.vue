@@ -1,13 +1,21 @@
 <template>
     <div class="view">
+        <span class="view-title">EXPERIENCE</span>
         <section class="experience-container">
-            <ExperienceEE />
+            <ExperienceItem
+                v-for="(data, id) in experienceData"
+                :key="id"
+                :mediaUrl="data.mediaUrl"
+                :text="data.text"
+                :class="id"
+            ></ExperienceItem>
         </section>
     </div>
 </template>
 
 <script setup>
-    import ExperienceEE from '@/components/ExperienceEE.vue';
+    import ExperienceItem from '@/components/ExperienceItem.vue';
+    import experienceData from '@/data/experience.json';
 </script>
 
 <style lang="scss">
