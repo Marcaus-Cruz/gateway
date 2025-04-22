@@ -29,7 +29,7 @@
     });
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     button.thumbnail-card {
         font-family: 'Montserrat Bold', sans-serif;
 

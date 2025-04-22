@@ -8,7 +8,7 @@
     <RouterView />
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
     #app {
         /* background-color: var(--color-hover); */
     }

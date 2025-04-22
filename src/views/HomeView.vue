@@ -74,11 +74,15 @@
     ]);
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
     .view {
         background-color: var(--color-background);
 
-        span {
+        .text-image-container img {
+            max-height: 25vmin;
+        }
+
+        span.view-title {
             margin: 3vmin auto;
             font-size: 3vmin;
         }

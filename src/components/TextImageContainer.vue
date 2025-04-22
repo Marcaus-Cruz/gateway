@@ -49,7 +49,6 @@
             align-items: center;
 
             img {
-                max-height: 25vmin;
                 border-radius: 3vmin;
             }
         }
