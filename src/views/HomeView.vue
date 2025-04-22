@@ -1,6 +1,6 @@
 <!-- v-for="({ text, mediaUrl, mediaType, style = {} }, index) in thumbnails" -->
 <template>
-    <div class="view">
+    <div class="view home">
         <span class="view-title">HOME</span>
         <section class="hero">
             <TextImageContainer
@@ -75,11 +75,12 @@
 </script>
 
 <style lang="scss">
-    .view {
+    .view.home {
         background-color: var(--color-background);
 
         .text-image-container img {
             max-height: 25vmin;
+            border-radius: 3vmin;
         }
 
         span.view-title {
