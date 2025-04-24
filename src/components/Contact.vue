@@ -28,7 +28,7 @@
     console.log({ name, email, phone, links });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     section.contact {
         @include flex-container(column, nowrap, center, center);
         font-size: 2.5vmin;
