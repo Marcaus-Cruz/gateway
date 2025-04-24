@@ -9,6 +9,7 @@
                 :type="mediaType"
             ></TextImageContainer>
         </section>
+        <RouterButton class="btn-resume" route="/resume">Check out my Resume</RouterButton>
         <Contact />
     </div>
 </template>
@@ -17,6 +18,7 @@
     import Contact from '@/components/Contact.vue';
     import TextImageContainer from '@/components/TextImageContainer.vue';
     import DataHomeGreeting from '@/data/greeting.json';
+    import RouterButton from '@/components/RouterButton.vue';
 
     const { text, mediaUrl, mediaType, alt } = DataHomeGreeting;
 </script>
@@ -34,27 +36,12 @@
             margin: 5vmin auto;
         }
 
-        section.thumbnails {
-            display: flex;
-            flex-direction: column;
+        .btn-resume {
+            align-items: center;
+            margin: 2em auto;
 
-            .cards {
-                position: relative;
-                display: flex;
-
-                .thumbnail {
-                    flex: 1 1 33%;
-                    height: 30vh;
-                    margin: 3vmin;
-                }
-
-                &::after {
-                    @include absolute-center($top: unset);
-                    font-size: 2vmin;
-                    text-align: center;
-                    opacity: 0.5;
-                }
-            }
+            background-color: rgba(255, 255, 255, 0.1);
+            color: var(--color-secondary);
         }
     }
 </style>

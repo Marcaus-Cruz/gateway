@@ -3,7 +3,7 @@
         <div class="not-found-text warning">! ! !</div>
         <div class="not-found-text title">404 Not Found</div>
         <div class="not-found-text subtitle">This page does not exist</div>
-        <RouterButton route="/" class="">Go Back</RouterButton>
+        <RouterButton route="/">Go Back</RouterButton>
     </section>
 </template>
 

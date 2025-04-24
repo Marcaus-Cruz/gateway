@@ -2,6 +2,7 @@ import ExperienceView from '@/views/ExperienceView.vue';
 import HomeView from '@/views/HomeView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import ContactView from '@/views/ContactView.vue';
+import ResumeView from '@/views/ResumeView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -21,6 +22,11 @@ const router = createRouter({
             path: '/experience/:id',
             name: 'experienceItem',
             component: ExperienceView,
+        },
+        {
+            path: '/resume',
+            name: 'resume',
+            component: ResumeView,
         },
         {
             path: '/contact',
