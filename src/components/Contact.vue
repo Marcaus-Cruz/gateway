@@ -39,9 +39,13 @@
             font-size: 1.5em;
         }
 
-        .contact-info-item {
-            font-family: 'Montserrat Medium', sans-serif;
-            margin: 0.5em auto;
+        .contact-info {
+            margin: 1em auto;
+
+            .contact-info-item {
+                font-family: 'Montserrat Medium', sans-serif;
+                margin: 0.5em auto;
+            }
         }
 
         .links {
@@ -56,8 +60,8 @@
                 }
 
                 img {
-                    max-width: 8em;
-                    max-height: 8em;
+                    max-width: 6em;
+                    max-height: 6em;
                 }
             }
         }
