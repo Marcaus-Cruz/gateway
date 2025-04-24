@@ -40,11 +40,13 @@
     const projectOptions = ref([
         {
             name: 'Fruit Force',
-            route: '/projects/fruitForce',
+            // route: '/projects/fruitForce',
+            route: '/projects',
         },
         {
             name: 'Chicky Sandie Review',
-            route: '/projects/chickySandieReview',
+            // route: '/projects/chickySandieReview',
+            route: '/projects',
         },
     ]);
 </script>

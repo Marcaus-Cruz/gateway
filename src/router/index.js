@@ -1,8 +1,9 @@
 import ExperienceView from '@/views/ExperienceView.vue';
 import HomeView from '@/views/HomeView.vue';
-import NotFoundView from '@/views/NotFoundView.vue';
+import ProjectsView from '@/views/ProjectsView.vue';
 import ContactView from '@/views/ContactView.vue';
 import ResumeView from '@/views/ResumeView.vue';
+import NotFoundView from '@/views/NotFoundView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -22,6 +23,11 @@ const router = createRouter({
             path: '/experience/:id',
             name: 'experienceItem',
             component: ExperienceView,
+        },
+        {
+            path: '/projects',
+            name: 'projects',
+            component: ProjectsView,
         },
         {
             path: '/resume',
