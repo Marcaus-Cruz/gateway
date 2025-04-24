@@ -14,11 +14,8 @@
 </template>
 
 <script setup>
-    import { gsap } from 'gsap';
-    import { onMounted, ref } from 'vue';
-    import ThumbnailCard from '../components/ThumbnailCard.vue';
-    import TextImageContainer from '../components/TextImageContainer.vue';
-    import Contact from '../components/Contact.vue';
+    import TextImageContainer from '@/components/TextImageContainer.vue';
+    import Contact from '@/components/Contact.vue';
 
     const textImage = Object.freeze({
         text: [
@@ -30,35 +27,6 @@
         mediaType: 'image',
         alt: 'Marcaus Cruz posing in front of the Eiffel Tower',
     });
-
-    // const randomAnimStyles = () => ({
-    //     animationDelay: `${Math.random() * 2}s`,
-    //     animationDuration: `${5 + Math.random()}s`,
-    //     animationTimingFunction: 'ease-in-out',
-    //     animationIterationCount: 'infinite',
-    //     animationName: 'rotateY',
-    // });
-
-    // const thumbnails = ref([
-    //     {
-    //         text: 'About Me',
-    //         mediaUrl: '/src/assets/img/thumb-aboutMe.jpg',
-    //         mediaType: 'image',
-    //         style: randomAnimStyles(),
-    //     },
-    //     {
-    //         text: 'Professional Experience',
-    //         mediaUrl: '/src/assets/img/thumb-experience.png',
-    //         mediaType: 'image',
-    //         style: randomAnimStyles(),
-    //     },
-    //     {
-    //         text: 'Personal Projects',
-    //         mediaUrl: '/src/assets/img/thumb-projects.png',
-    //         mediaType: 'image',
-    //         style: randomAnimStyles(),
-    //     },
-    // ]);
 </script>
 
 <style lang="scss">
