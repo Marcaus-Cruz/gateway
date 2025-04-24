@@ -80,7 +80,7 @@ body {
     font-weight: normal;
 }
 
-.header-button {
+.btn {
     position: relative;
     @include flex-container(column);
     border-radius: 0.1em;
@@ -102,6 +102,7 @@ body {
     }
 
     &.active {
+        background-color: rgba(255, 255, 255, 0.1);
         color: var(--color-primary);
         text-decoration: underline;
     }

@@ -5,16 +5,16 @@
         </RouterLink>
 
         <div class="nav-buttons">
-            <HeaderButton route="/">Home</HeaderButton>
+            <RouterButton route="/">Home</RouterButton>
             <DropdownMenu route="/experience" :options="experienceOptions">Experience</DropdownMenu>
             <DropdownMenu route="/projects" :options="projectOptions">Projects</DropdownMenu>
-            <HeaderButton route="/contact">Contact</HeaderButton>
+            <RouterButton route="/contact">Contact</RouterButton>
         </div>
     </div>
 </template>
 
 <script setup>
-    import HeaderButton from './HeaderButton.vue';
+    import RouterButton from './RouterButton.vue';
     import { RouterLink } from 'vue-router';
     import DropdownMenu from './DropdownMenu.vue';
     import { ref } from 'vue';

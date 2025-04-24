@@ -1,13 +1,13 @@
 <template>
     <div class="dropdown-wrapper" @mouseover="isHovered = true" @mouseleave="isHovered = false">
-        <HeaderButton v-if="route" :route="route">
+        <RouterButton v-if="route" :route="route">
             <slot></slot>
-        </HeaderButton>
-        <button v-else class="header-button">
+        </RouterButton>
+        <button v-else class="btn">
             <slot></slot>
         </button>
         <div class="options-wrapper">
-            <HeaderButton
+            <RouterButton
                 class="option"
                 v-for="({ name, route }, index) in options"
                 v-show="isHovered"
@@ -15,14 +15,14 @@
                 :route="route"
             >
                 {{ name }}
-            </HeaderButton>
+            </RouterButton>
         </div>
     </div>
 </template>
 
 <script setup>
     import { defineProps, onMounted, ref } from 'vue';
-    import HeaderButton from './HeaderButton.vue';
+    import RouterButton from './RouterButton.vue';
     const props = defineProps({
         options: {
             type: Array,
