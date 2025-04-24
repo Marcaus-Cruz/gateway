@@ -3,10 +3,10 @@
         <span class="view-title">HOME</span>
         <section class="hero">
             <TextImageContainer
-                :text="textImage.text"
-                :mediaUrl="textImage.mediaUrl"
-                :alt="textImage.alt"
-                :type="textImage.mediaType"
+                :text="text"
+                :mediaUrl="mediaUrl"
+                :alt="alt"
+                :type="mediaType"
             ></TextImageContainer>
         </section>
         <Contact />
@@ -14,19 +14,11 @@
 </template>
 
 <script setup>
-    import TextImageContainer from '@/components/TextImageContainer.vue';
     import Contact from '@/components/Contact.vue';
+    import TextImageContainer from '@/components/TextImageContainer.vue';
+    import DataHomeGreeting from '@/data/greeting.json';
 
-    const textImage = Object.freeze({
-        text: [
-            "Hello I'm Marcaus Cruz",
-            "I'm a Software Engineer based in the Portland Metro Area.",
-            'Thanks for visiting my site',
-        ],
-        mediaUrl: '/src/assets/img/thumb-aboutMe.jpg',
-        mediaType: 'image',
-        alt: 'Marcaus Cruz posing in front of the Eiffel Tower',
-    });
+    const { text, mediaUrl, mediaType, alt } = DataHomeGreeting;
 </script>
 
 <style lang="scss">
@@ -63,7 +55,6 @@
 
                 &::after {
                     @include absolute-center($top: unset);
-                    // content: 'logos from https://icons8.com/';
                     font-size: 2vmin;
                     text-align: center;
                     opacity: 0.5;

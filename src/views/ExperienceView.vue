@@ -16,7 +16,7 @@
 <script setup>
     import ExperienceItem from '@/components/ExperienceItem.vue';
     import experienceData from '@/data/experience.json';
-    import { ref, onMounted, watch, computed } from 'vue';
+    import { ref, watch, computed } from 'vue';
     import { useRoute } from 'vue-router';
 
     const route = useRoute();
