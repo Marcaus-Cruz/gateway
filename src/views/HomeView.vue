@@ -1,4 +1,3 @@
-<!-- v-for="({ text, mediaUrl, mediaType, style = {} }, index) in thumbnails" -->
 <template>
     <div class="view home">
         <span class="view-title">HOME</span>
@@ -9,20 +8,6 @@
                 :alt="textImage.alt"
                 :type="textImage.mediaType"
             ></TextImageContainer>
-        </section>
-        <section class="thumbnails">
-            <div class="cards">
-                <ThumbnailCard
-                    v-for="(thumbnail, index) in thumbnails"
-                    :key="index"
-                    :style="thumbnail.style"
-                    :mediaType="thumbnail.mediaType"
-                    :mediaUrl="thumbnail.mediaUrl"
-                    class="thumbnail"
-                >
-                    {{ thumbnail.text }}
-                </ThumbnailCard>
-            </div>
         </section>
     </div>
 </template>
@@ -44,34 +29,34 @@
         alt: 'Marcaus Cruz posing in front of the Eiffel Tower',
     });
 
-    const randomAnimStyles = () => ({
-        animationDelay: `${Math.random() * 2}s`,
-        animationDuration: `${5 + Math.random()}s`,
-        animationTimingFunction: 'ease-in-out',
-        animationIterationCount: 'infinite',
-        animationName: 'rotateY',
-    });
+    // const randomAnimStyles = () => ({
+    //     animationDelay: `${Math.random() * 2}s`,
+    //     animationDuration: `${5 + Math.random()}s`,
+    //     animationTimingFunction: 'ease-in-out',
+    //     animationIterationCount: 'infinite',
+    //     animationName: 'rotateY',
+    // });
 
-    const thumbnails = ref([
-        {
-            text: 'About Me',
-            mediaUrl: '/src/assets/img/thumb-aboutMe.jpg',
-            mediaType: 'image',
-            style: randomAnimStyles(),
-        },
-        {
-            text: 'Professional Experience',
-            mediaUrl: '/src/assets/img/thumb-experience.png',
-            mediaType: 'image',
-            style: randomAnimStyles(),
-        },
-        {
-            text: 'Personal Projects',
-            mediaUrl: '/src/assets/img/thumb-projects.png',
-            mediaType: 'image',
-            style: randomAnimStyles(),
-        },
-    ]);
+    // const thumbnails = ref([
+    //     {
+    //         text: 'About Me',
+    //         mediaUrl: '/src/assets/img/thumb-aboutMe.jpg',
+    //         mediaType: 'image',
+    //         style: randomAnimStyles(),
+    //     },
+    //     {
+    //         text: 'Professional Experience',
+    //         mediaUrl: '/src/assets/img/thumb-experience.png',
+    //         mediaType: 'image',
+    //         style: randomAnimStyles(),
+    //     },
+    //     {
+    //         text: 'Personal Projects',
+    //         mediaUrl: '/src/assets/img/thumb-projects.png',
+    //         mediaType: 'image',
+    //         style: randomAnimStyles(),
+    //     },
+    // ]);
 </script>
 
 <style lang="scss">
