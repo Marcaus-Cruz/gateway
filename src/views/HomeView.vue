@@ -9,6 +9,7 @@
                 :type="textImage.mediaType"
             ></TextImageContainer>
         </section>
+        <Contact />
     </div>
 </template>
 
@@ -17,6 +18,7 @@
     import { onMounted, ref } from 'vue';
     import ThumbnailCard from '../components/ThumbnailCard.vue';
     import TextImageContainer from '../components/TextImageContainer.vue';
+    import Contact from '../components/Contact.vue';
 
     const textImage = Object.freeze({
         text: [
