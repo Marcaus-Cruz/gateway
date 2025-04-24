@@ -18,8 +18,6 @@
 </template>
 
 <script setup>
-    import { defineProps } from 'vue';
-
     const MEDIA_TYPES = Object.freeze({ img: 'image', vid: 'video' });
     const props = defineProps({
         mediaUrl: { type: String, default: '/src/assets/MCLogoBlack.png' },

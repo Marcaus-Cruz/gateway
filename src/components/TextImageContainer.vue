@@ -13,8 +13,6 @@
 </template>
 
 <script setup>
-    import { defineProps } from 'vue';
-
     const MEDIA_TYPES = Object.freeze({ img: 'image', vid: 'video' });
     const props = defineProps({
         text: { type: Array, default: [] },

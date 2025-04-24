@@ -3,9 +3,10 @@
         <TextImageContainer :mediaUrl="mediaUrl" :text="textArray"></TextImageContainer>
     </section>
 </template>
+
 <script setup>
     import TextImageContainer from '@/components/TextImageContainer.vue';
-    import { defineProps, onMounted, ref } from 'vue';
+    import { onMounted, ref } from 'vue';
 
     const props = defineProps({
         mediaUrl: {
