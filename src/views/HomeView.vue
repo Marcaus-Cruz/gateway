@@ -30,11 +30,6 @@
             border-radius: 3vmin;
         }
 
-        span.view-title {
-            margin: 3vmin auto;
-            font-size: 3vmin;
-        }
-
         section.hero {
             margin: 5vmin auto;
         }

@@ -8,14 +8,14 @@
                 :mediaUrl="data.mediaUrl"
                 :text="data.text"
                 :class="[id, data.organization]"
-            ></ExperienceItem>
+            />
         </section>
     </div>
 </template>
 
 <script setup>
     import ExperienceItem from '@/components/ExperienceItem.vue';
-    import experienceData from '@/data/experience.json';
+    import DataExperience from '@/data/experience.json';
     import { ref, watch, computed } from 'vue';
     import { useRoute } from 'vue-router';
 
@@ -29,10 +29,10 @@
     watch(
         () => route.fullPath,
         () => {
-            if (experienceId.value && experienceData[experienceId.value]) {
-                dataToUse.value = { [experienceId.value]: experienceData[experienceId.value] };
+            if (experienceId.value && DataExperience[experienceId.value]) {
+                dataToUse.value = { [experienceId.value]: DataExperience[experienceId.value] };
             } else {
-                dataToUse.value = experienceData;
+                dataToUse.value = DataExperience;
             }
         },
         { immediate: true }

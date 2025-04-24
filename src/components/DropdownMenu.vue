@@ -21,8 +21,9 @@
 </template>
 
 <script setup>
-    import { defineProps, onMounted, ref } from 'vue';
-    import RouterButton from './RouterButton.vue';
+    import { defineProps, ref } from 'vue';
+    import RouterButton from '@/components/RouterButton.vue';
+
     const props = defineProps({
         options: {
             type: Array,

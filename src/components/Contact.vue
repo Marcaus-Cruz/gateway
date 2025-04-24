@@ -21,11 +21,9 @@
 </template>
 
 <script setup>
-    import contactInfo from '@/data/contact.json';
+    import DataContactInfo from '@/data/contact.json';
 
-    const { name, email, phone, socials: links = {} } = contactInfo;
-
-    console.log({ name, email, phone, links });
+    const { name, email, phone, socials: links = {} } = DataContactInfo;
 </script>
 
 <style lang="scss" scoped>

@@ -12,14 +12,13 @@
             type: String,
         },
         text: {
-            type: Array,
+            type: Object,
         },
     });
     const textArray = ref([]);
 
     onMounted(() => {
         const { title = '', subtitle = '', description = [] } = props.text;
-        console.log({ title, subtitle, description, textArray, textObj: props.text });
         textArray.value.push(title, subtitle, ...description);
     });
 </script>
