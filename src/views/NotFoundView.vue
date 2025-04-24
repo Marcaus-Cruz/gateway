@@ -3,15 +3,15 @@
         <div class="not-found-text warning">! ! !</div>
         <div class="not-found-text title">404 Not Found</div>
         <div class="not-found-text subtitle">This page does not exist</div>
-        <RouterLink to="/" class="">Go Back</RouterLink>
+        <RouterButton to="/" class="">Go Back</RouterButton>
     </section>
 </template>
 
 <script setup>
-    import { RouterLink } from 'vue-router';
+    import RouterButton from '@/components/RouterButton.vue';
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     .view.not-found {
         @include flex-container(column, nowrap, center, center);
         margin: 10%;
@@ -31,6 +31,12 @@
             &.subtitle {
                 font-family: 'Montserrat Regular', sans-serif;
             }
+        }
+
+        .btn {
+            color: var(--color-primary);
+            background-color: rgba(255, 255, 255, 0.1);
+            margin-top: 1em;
         }
     }
 </style>
