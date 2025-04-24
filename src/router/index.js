@@ -1,6 +1,7 @@
 import ExperienceView from '@/views/ExperienceView.vue';
 import HomeView from '@/views/HomeView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
+import ContactView from '@/views/ContactView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -20,6 +21,11 @@ const router = createRouter({
             path: '/experience/:id',
             name: 'experienceItem',
             component: ExperienceView,
+        },
+        {
+            path: '/contact',
+            name: 'contact',
+            component: ContactView,
         },
         {
             path: '/:catchAll(.*)',
