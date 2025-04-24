@@ -1,0 +1,17 @@
+{
+    "name": "Marcaus Cruz",
+    "email": "marcauscruz@gmail.com",
+    "phone": "+1 (360)821-9681",
+    "socials": {
+        "linkedin": {
+            "text": "LinkedIn",
+            "mediaUrl": "/src/assets/img/icon-linkedin.png",
+            "url": "https://www.linkedin.com/in/marcaus-cruz/"
+        },
+        "github": {
+            "text": "Github",
+            "mediaUrl": "/src/assets/img/icon-github.png",
+            "url": "https://github.com/Marcaus-Cruz"
+        }
+    }
+}
