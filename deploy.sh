@@ -3,23 +3,22 @@
 # abort on errors
 set -e
 
-# build
+# build the app
 npm run build
 
-# navigate into the build output directory
+# go into the build output directory
 cd dist
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
+# add a CNAME file for your custom domain
+echo 'marcauscruz.com' > CNAME
 
+# initialize a fresh Git repo in dist/
 git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git main
+# force push to the gh-pages branch of your "gateway" repo
+git push -f git@github.com:Marcaus-Cruz/gateway.git prod:gh-pages
 
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:Marcaus-Cruz/gateway.git main:gh-pages
-
+# go back to the root
 cd -
