@@ -1,24 +1,25 @@
 #!/usr/bin/env sh
 
-# abort on errors
+# Abort on errors
 set -e
 
-# build the app
-npm run build
+# Build your app (this must happen first!)
+npm run build-only
 
-# go into the build output directory
+# Go into the dist folder
 cd dist
 
-# add a CNAME file for your custom domain
+# Add CNAME for custom domain
 echo 'marcauscruz.com' > CNAME
 
-# initialize a fresh Git repo in dist/
+# Initialize a new Git repository
 git init
 git add -A
 git commit -m 'deploy'
 
-# force push to the gh-pages branch of your "gateway" repo
-git push -f git@github.com:Marcaus-Cruz/gateway.git main:gh-pages
+# Add GitHub remote and push to gh-pages
+git remote add origin git@github.com:Marcaus-Cruz/gateway.git
+git push -f origin master:gh-pages
 
-# go back to the root
+# Go back to previous directory
 cd -
