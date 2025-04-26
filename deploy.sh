@@ -18,7 +18,7 @@ git add -A
 git commit -m 'deploy'
 
 # force push to the gh-pages branch of your "gateway" repo
-git push -f git@github.com:Marcaus-Cruz/gateway.git prod:gh-pages
+git push -f git@github.com:Marcaus-Cruz/gateway.git main:gh-pages
 
 # go back to the root
 cd -
