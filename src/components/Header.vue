@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <RouterLink to="/">
-            <img class="logo" src="/src/assets/img/MCLogoWhite.png" alt="logo" />
+            <img class="logo" src="/img/MCLogoWhite.png" alt="logo" />
         </RouterLink>
 
         <div class="nav-buttons">

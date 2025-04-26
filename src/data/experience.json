@@ -1,7 +1,7 @@
 {
     "ee": {
         "organization": "ee",
-        "mediaUrl": "/src/assets/img/icon-ee.png",
+        "mediaUrl": "/img/icon-ee.png",
         "text": {
             "title": "Software Engineer (May 22 - March 25)",
             "subtitle": "Exponential Entertainment Inc.",
@@ -18,7 +18,7 @@
     },
     "caaml": {
         "organization": "wwu",
-        "mediaUrl": "/src/assets/img/icon-wwu.png",
+        "mediaUrl": "/img/icon-wwu.png",
         "text": {
             "title": "Frontend Engineer (Jan 21 - Dec 21)",
             "subtitle": "Instructor Efficiency Tool (CAAML Web Tool) - Western Washington University",
@@ -29,7 +29,7 @@
     },
     "puf": {
         "organization": "wwu",
-        "mediaUrl": "/src/assets/img/icon-wwu.png",
+        "mediaUrl": "/img/icon-wwu.png",
         "text": {
             "title": "Research Assistant (Oct 20 - Dec 21)",
             "subtitle": "Research Assistant under Professor Tarek Idriss - Western Washington University",
@@ -40,7 +40,7 @@
     },
     "centurylink": {
         "organization": "centurylink",
-        "mediaUrl": "/src/assets/img/icon-centurylink.png",
+        "mediaUrl": "/img/icon-centurylink.png",
         "text": {
             "title": "Office Associate (Sep 16 - Sep 20)",
             "subtitle": "Centurylink",
