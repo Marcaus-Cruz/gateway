@@ -20,6 +20,10 @@
     src: url('/fonts/Montserrat\ Regular.ttf');
 }
 
+html {
+    scrollbar-width: none;
+}
+
 body {
     font-family:
         Inter,
