@@ -54,10 +54,7 @@
 <style lang="scss">
     .header {
         position: sticky;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100vw;
+        @include flex-container(row, nowrap, space-between, center);
         height: var(--header-height);
         padding: 0.5% 1% 0% 10%;
 
@@ -65,24 +62,48 @@
         left: 0;
 
         background-color: var(--color-background);
-    }
+        overflow-x: clip;
 
-    .logo {
-        max-height: var(--header-height);
-        max-width: var(--header-height);
-    }
+        .logo {
+            max-height: var(--header-height);
+            max-width: var(--header-height);
+        }
 
-    .nav-buttons {
-        display: flex;
-        align-items: center;
-    }
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+        }
 
-    a {
-        transition: all 0.5s ease;
-    }
+        a {
+            transition: all 0.5s ease;
+        }
 
-    a:hover,
-    a:hover .logo {
-        scale: 1.2;
+        a:hover,
+        a:hover .logo {
+            scale: 1.2;
+        }
+
+        @media (orientation: portrait) {
+            flex-direction: column;
+            height: auto;
+            padding: unset;
+
+            .nav-buttons {
+                width: 100%;
+                justify-content: space-around;
+                border: 0.5vmin solid white;
+                border-left-width: 0vmin;
+                border-right-width: 0vmin;
+
+                .btn {
+                    padding: 0.5em;
+                    margin: 0.1em;
+                }
+
+                // > * {
+
+                // }
+            }
+        }
     }
 </style>
