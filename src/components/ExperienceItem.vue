@@ -32,16 +32,33 @@
             margin-left: 1em;
 
             .line {
-                font-size: 2vmin;
+                font-size: 0.8em;
+            }
+
+            .line-0,
+            .line-1 {
+                text-align: center;
             }
 
             .line-0 {
-                font-size: 5vmin;
+                // title
+                font-size: 2em;
             }
 
             .line-1 {
+                // subtitle
                 font-family: 'Montserrat Medium', sans-serif;
-                font-size: 3vmin;
+                font-size: 1.2em;
+            }
+        }
+
+        @media (orientation: portrait) {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .text-container {
+                margin-left: unset;
+                padding: 1em;
             }
         }
     }
