@@ -1,6 +1,6 @@
 <template>
     <div class="view experience">
-        <span class="view-title">{{ experienceId }}</span>
+        <span class="view-title">{{ title }}</span>
         <section class="experience-container">
             <ExperienceItem
                 v-for="(data, id) in dataToUse"
@@ -24,16 +24,18 @@
 
     // A computed ref that always reflects the current `id` param in the URL
     const experienceId = computed(() => route.params.id || 'EXPERIENCE');
+    const isSingleExperience = computed(
+        () => experienceId.value && DataExperience[experienceId.value]
+    );
+    const title = computed(() => (isSingleExperience.value ? '' : 'EXPERIENCE'));
 
     // Set the correct data when the component is mounted or when the route changes
     watch(
         () => route.fullPath,
         () => {
-            if (experienceId.value && DataExperience[experienceId.value]) {
-                dataToUse.value = { [experienceId.value]: DataExperience[experienceId.value] };
-            } else {
-                dataToUse.value = DataExperience;
-            }
+            dataToUse.value = isSingleExperience.value
+                ? { [experienceId.value]: DataExperience[experienceId.value] }
+                : DataExperience;
         },
         { immediate: true }
     );
