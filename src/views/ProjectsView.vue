@@ -15,6 +15,7 @@
     .view.projects {
         @include flex-container(column, nowrap, center, center);
         margin: 10%;
+        text-align: center;
 
         .projects-text {
             font-family: 'Montserrat Bold', sans-serif;
