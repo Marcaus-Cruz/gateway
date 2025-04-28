@@ -40,6 +40,10 @@ body {
     background: var(--color-background);
     min-height: 100vh;
 
+    @media (orientation: portrait) {
+        font-size: 2vmax;
+    }
+
     transition:
         color 0.5s,
         background-color 0.5s;

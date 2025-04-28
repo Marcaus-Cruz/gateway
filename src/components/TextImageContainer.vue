@@ -28,7 +28,6 @@
 
         .text-container {
             font-family: 'Montserrat Regular', sans-serif;
-            font-size: 2.5vmin;
             padding: 0em 1em;
 
             .line {
