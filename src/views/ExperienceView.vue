@@ -46,18 +46,15 @@
         .experience-item {
             margin: 1.5em auto;
 
-            .text-image-container {
-                .image-container {
-                    img {
-                        max-width: 20vmin;
-                    }
-                }
+            .text-image-container .image-container img {
+                max-width: 20vmin;
             }
 
             &.wwu {
                 &:nth-child(2) {
                     margin-bottom: 0;
                 }
+
                 &:nth-child(3) {
                     margin-top: 0;
 
@@ -69,6 +66,20 @@
 
             &.centurylink img {
                 background: white;
+            }
+
+            @media (orientation: portrait) {
+                flex-direction: column-reverse;
+                align-items: center;
+
+                .text-image-container .image-container img {
+                    max-width: unset;
+                    max-height: 20vmax;
+                }
+
+                &.wwu:nth-child(3) img {
+                    display: none;
+                }
             }
         }
     }
