@@ -43,5 +43,19 @@
             background-color: rgba(255, 255, 255, 0.1);
             color: var(--color-secondary);
         }
+
+        @media (orientation: portrait) {
+            .text-image-container {
+                flex-direction: column;
+
+                .text-container {
+                    padding-bottom: 1em;
+                }
+
+                img {
+                    max-height: 25vmax;
+                }
+            }
+        }
     }
 </style>
