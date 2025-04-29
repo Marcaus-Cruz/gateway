@@ -70,7 +70,7 @@
             }
         }
 
-        .experience-item {
+        .experience-card {
             margin: 1.5em auto;
 
             .text-image-container .image-container img {
