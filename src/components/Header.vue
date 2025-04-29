@@ -94,7 +94,9 @@
                 border: 0.5vmin solid white;
                 border-left-width: 0vmin;
                 border-right-width: 0vmin;
-                overflow-x: scroll;
+
+                overflow: scroll hidden;
+                scrollbar-width: none;
 
                 .btn {
                     padding: 0.5em;
