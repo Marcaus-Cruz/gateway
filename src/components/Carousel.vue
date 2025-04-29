@@ -6,8 +6,8 @@
 
         <div v-show="isExpanded" class="carousel" :class="{ expanded: isExpanded }">
             <button class="btn prev-btn" @click="prevImage">Prev</button>
-
             <div class="carousel-content">
+                <span class="counter">{{ `${activeIndex + 1}/${totalItems}` }}</span>
                 <TextImageContainer
                     v-if="currentItem"
                     :mediaUrl="currentItem.mediaUrl"
@@ -41,11 +41,10 @@
 
     const isExpanded = ref(false);
     const activeIndex = ref(0);
+    const totalItems = computed(() => props.carouselItems.length);
 
     const buttonText = computed(() => (isExpanded.value ? props.collapseText : props.expandText));
-    const currentItem = computed(() => {
-        return props.carouselItems[activeIndex.value] || null;
-    });
+    const currentItem = computed(() => props.carouselItems[activeIndex.value] || null);
 
     const prevImage = () => {
         if (props.carouselItems.length === 0) return;
