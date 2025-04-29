@@ -94,15 +94,12 @@
                 border: 0.5vmin solid white;
                 border-left-width: 0vmin;
                 border-right-width: 0vmin;
+                overflow-x: scroll;
 
                 .btn {
                     padding: 0.5em;
-                    margin: 0.1em;
+                    margin: auto 0.5em;
                 }
-
-                // > * {
-
-                // }
             }
         }
     }
