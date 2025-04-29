@@ -68,4 +68,17 @@
             }
         }
     }
+
+    .carousel-container {
+        .text-image-container .text-container {
+            text-align: center;
+
+            .line {
+                font-size: 0.8em;
+            }
+            .line-0 {
+                font-size: 1em;
+            }
+        }
+    }
 </style>
