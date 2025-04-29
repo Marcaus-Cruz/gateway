@@ -2,19 +2,29 @@
     <div class="view experience">
         <span class="view-title">{{ title }}</span>
         <section class="experience-container">
-            <ExperienceItem
-                v-for="(data, id) in dataToUse"
-                :key="id"
-                :mediaUrl="data.mediaUrl"
-                :text="data.text"
-                :class="[id, data.organization]"
-            />
+            <div
+                v-for="experience in experiences"
+                :key="experience.id"
+                :class="[experience.id, experience.organization]"
+            >
+                <ExperienceItem
+                    :mediaUrl="experience.mediaUrl"
+                    :text="experience.text"
+                    :class="[experience.id, experience.organization]"
+                />
+                <Carousel
+                    v-if="experience.hasCarousel"
+                    :expandText="experience.carouselExpandText"
+                    :carouselItems="experience.carouselItems"
+                />
+            </div>
         </section>
     </div>
 </template>
 
 <script setup>
     import ExperienceItem from '@/components/ExperienceItem.vue';
+    import Carousel from '@/components/Carousel.vue';
     import DataExperience from '@/data/experience.json';
     import { ref, watch, computed } from 'vue';
     import { useRoute } from 'vue-router';
@@ -22,14 +32,12 @@
     const route = useRoute();
     const dataToUse = ref({});
 
-    // A computed ref that always reflects the current `id` param in the URL
     const experienceId = computed(() => route.params.id || 'EXPERIENCE');
     const isSingleExperience = computed(
         () => experienceId.value && DataExperience[experienceId.value]
     );
     const title = computed(() => (isSingleExperience.value ? '' : 'EXPERIENCE'));
 
-    // Set the correct data when the component is mounted or when the route changes
     watch(
         () => route.fullPath,
         () => {
@@ -39,31 +47,45 @@
         },
         { immediate: true }
     );
+
+    // Transform dataToUse into a cleaner array for render
+    const experiences = computed(() =>
+        Object.entries(dataToUse.value).map(
+            ([id, { mediaUrl = '', text = '', organization = '', carousel = undefined }]) => ({
+                id,
+                mediaUrl,
+                text,
+                organization,
+                hasCarousel: !!carousel,
+                carouselExpandText: carousel ? carousel.expandText : '',
+                carouselItems: carousel ? carousel.carouselItems : [],
+            })
+        )
+    );
 </script>
 
 <style lang="scss">
     .experience-container {
         @include flex-container(column);
 
+        div.wwu {
+            &:nth-child(2) {
+                margin-bottom: 0;
+            }
+
+            &:nth-child(3) {
+                margin-top: 0;
+
+                img {
+                    opacity: 0;
+                }
+            }
+        }
         .experience-item {
             margin: 1.5em auto;
 
             .text-image-container .image-container img {
                 max-width: 20vmin;
-            }
-
-            &.wwu {
-                &:nth-child(2) {
-                    margin-bottom: 0;
-                }
-
-                &:nth-child(3) {
-                    margin-top: 0;
-
-                    img {
-                        opacity: 0;
-                    }
-                }
             }
 
             &.centurylink img {

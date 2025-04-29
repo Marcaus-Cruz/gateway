@@ -25,6 +25,85 @@
             "description": [
                 "Developed an interactive web tool using JavaScript, Node, and Express to visualize machine learning algorithm outputs, significantly enhancing instructor efficiency in class scheduling. As the lead on front-end development, I routed and styled all web pages using HTML, CSS, and JavaScript and designed dynamic D3 visualizations to improve usability and overall user experience. In addition, I simplified project workflows using Trello boards and Agile Scrum practices, ensuring consistent progress and alignment with client goals."
             ]
+        },
+        "carousel": {
+            "carouselItems": [
+                {
+                    "mediaUrl": "/img/caaml/caaml1.png",
+                    "text": [
+                        "Landing Page",
+                        "Here's the unfinished landing/home page where users login.",
+                        "Includes sections that describe use cases of our product, a tutorial section, and descriptions of the various graphs included."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml2.png",
+                    "text": [
+                        "User Login",
+                        "Our project connected to WWU's CAS Login System which is a secure login system where only WWU accounts could log in.",
+                        "Users cannot go beyond the home page without logging into their Western Accounts."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml3.png",
+                    "text": [
+                        "My Courses Page -- Create New Term",
+                        "Once logged in, you can go to your user associated the 'my courses' page where you can create terms.",
+                        "Here is the create a term modal I created. This has basic validation and successfully creates a new folder that courses can populate."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml4.png",
+                    "text": [
+                        "My Courses Page -- Add a course",
+                        "This modal handles the sub folder that holds actual classroom lectures. This course is then added to whichever term is selected from the drop down you see right above."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml5.png",
+                    "text": [
+                        "My Courses Page -- Term Selector & Course Cards",
+                        "This image is demonstrating how the dropdown works and what the course cards look like. You can click \"Go\" on any of these cards to view that courses' lectures."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml6.png",
+                    "text": ["My Courses Page -- Remove a Course"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml7.png",
+                    "text": ["Record Page"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml8.png",
+                    "text": ["Record Page"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml9.png",
+                    "text": ["Chart -- Heat Map"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml10.png",
+                    "text": ["Chart -- Activity Trace"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml11.png",
+                    "text": ["Chart -- Activity Trace"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml12.png",
+                    "text": ["Chart -- Activity Trace"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml13.png",
+                    "text": ["Chart -- Activity Trace"]
+                },
+                {
+                    "mediaUrl": "/img/caaml/caaml14.png",
+                    "text": ["Chart -- Pie Chart"]
+                }
+            ],
+            "expandText": "Screenshots"
         }
     },
     "puf": {
