@@ -27,83 +27,89 @@
             ]
         },
         "carousel": {
+            "expandText": "Screenshots",
+            "collapseText": "Hide them",
             "carouselItems": [
                 {
                     "mediaUrl": "/img/caaml/caaml1.png",
                     "text": [
-                        "Landing Page",
-                        "Here's the unfinished landing/home page where users login.",
-                        "Includes sections that describe use cases of our product, a tutorial section, and descriptions of the various graphs included."
-                    ]
-                },
-                {
-                    "mediaUrl": "/img/caaml/caaml2.png",
-                    "text": [
-                        "User Login",
-                        "Our project connected to WWU's CAS Login System which is a secure login system where only WWU accounts could log in.",
-                        "Users cannot go beyond the home page without logging into their Western Accounts."
+                        "[Landing]",
+                        "Describes use cases of our product, tutorials, and explanations of the various graphs included.",
+                        "Login is connected to WWU's CAS Login System."
                     ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml3.png",
                     "text": [
-                        "My Courses Page -- Create New Term",
+                        "[Courses]: New Term",
                         "Once logged in, you can go to your user associated the 'my courses' page where you can create terms.",
-                        "Here is the create a term modal I created. This has basic validation and successfully creates a new folder that courses can populate."
+                        "This of course tied into the backend to verify term data."
                     ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml4.png",
                     "text": [
-                        "My Courses Page -- Add a course",
+                        "[Courses]: Add",
                         "This modal handles the sub folder that holds actual classroom lectures. This course is then added to whichever term is selected from the drop down you see right above."
                     ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml5.png",
                     "text": [
-                        "My Courses Page -- Term Selector & Course Cards",
+                        "[Courses]: Term Selector & Course Cards",
                         "This image is demonstrating how the dropdown works and what the course cards look like. You can click \"Go\" on any of these cards to view that courses' lectures."
                     ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml6.png",
-                    "text": ["My Courses Page -- Remove a Course"]
-                },
-                {
-                    "mediaUrl": "/img/caaml/caaml7.png",
-                    "text": ["Record Page"]
+                    "text": ["[Courses]: Remove"]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml8.png",
-                    "text": ["Record Page"]
-                },
-                {
-                    "mediaUrl": "/img/caaml/caaml9.png",
-                    "text": ["Chart -- Heat Map"]
+                    "text": [
+                        "[Record]",
+                        "Professors get to this page before each class session and setup their mic and/or camera.",
+                        "Since we didn't have a classroom, we could not showcase the real time data translation in the preview."
+                    ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml10.png",
-                    "text": ["Chart -- Activity Trace"]
+                    "text": [
+                        "[Chart]: Heat Map",
+                        "Shows the average of all activities selected on the left hand side.",
+                        "User is able to select and deselect activities to compare specific data."
+                    ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml11.png",
-                    "text": ["Chart -- Activity Trace"]
+                    "text": [
+                        "[Chart]: Activity Trace",
+                        "This is showing all classroom sessions for a course, comparing general instructor activity vs. Student Question/Answer activies."
+                    ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml12.png",
-                    "text": ["Chart -- Activity Trace"]
+                    "text": [
+                        "[Chart]: Activity Trace",
+                        "This is total lecture time throughout the course."
+                    ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml13.png",
-                    "text": ["Chart -- Activity Trace"]
+                    "text": [
+                        "[Chart]: Activity Trace",
+                        "Above is meant to show the ability to filter by day.",
+                        "User is able to select N number of days they want to compare."
+                    ]
                 },
                 {
                     "mediaUrl": "/img/caaml/caaml14.png",
-                    "text": ["Chart -- Pie Chart"]
+                    "text": [
+                        "[Chart]: Pie Chart & Line Graph",
+                        "Two of the simpler graphs to show overall time spent on selected activities, and when the spikes in those activities took place."
+                    ]
                 }
-            ],
-            "expandText": "Screenshots"
+            ]
         }
     },
     "puf": {
