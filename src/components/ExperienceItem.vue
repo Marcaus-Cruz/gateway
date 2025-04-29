@@ -6,6 +6,7 @@
         <Carousel
             v-if="experience.hasCarousel"
             :expandText="experience.carouselExpandText"
+            :collapseText="experience.carouselCollapseText"
             :carouselItems="experience.carouselItems"
         />
     </div>
