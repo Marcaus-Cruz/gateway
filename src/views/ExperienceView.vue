@@ -2,29 +2,17 @@
     <div class="view experience">
         <span class="view-title">{{ title }}</span>
         <section class="experience-container">
-            <div
+            <ExperienceItem
                 v-for="experience in experiences"
                 :key="experience.id"
-                :class="[experience.id, experience.organization]"
-            >
-                <ExperienceItem
-                    :mediaUrl="experience.mediaUrl"
-                    :text="experience.text"
-                    :class="[experience.id, experience.organization]"
-                />
-                <Carousel
-                    v-if="experience.hasCarousel"
-                    :expandText="experience.carouselExpandText"
-                    :carouselItems="experience.carouselItems"
-                />
-            </div>
+                :experience="experience"
+            />
         </section>
     </div>
 </template>
 
 <script setup>
     import ExperienceItem from '@/components/ExperienceItem.vue';
-    import Carousel from '@/components/Carousel.vue';
     import DataExperience from '@/data/experience.json';
     import { ref, watch, computed } from 'vue';
     import { useRoute } from 'vue-router';
@@ -68,7 +56,7 @@
     .experience-container {
         @include flex-container(column);
 
-        div.wwu {
+        .experience-card.wwu {
             &:nth-child(2) {
                 margin-bottom: 0;
             }
@@ -81,6 +69,7 @@
                 }
             }
         }
+
         .experience-item {
             margin: 1.5em auto;
 

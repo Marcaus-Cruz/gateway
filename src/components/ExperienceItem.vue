@@ -1,28 +1,36 @@
 <template>
-    <section class="experience-item">
-        <TextImageContainer :mediaUrl="mediaUrl" :text="textArray"></TextImageContainer>
-    </section>
+    <div class="experience-card" :class="[experience.id, experience.organization]">
+        <section class="experience-item">
+            <TextImageContainer :mediaUrl="experience.mediaUrl" :text="textArray" />
+        </section>
+        <Carousel
+            v-if="experience.hasCarousel"
+            :expandText="experience.carouselExpandText"
+            :carouselItems="experience.carouselItems"
+        />
+    </div>
 </template>
 
 <script setup>
     import TextImageContainer from '@/components/TextImageContainer.vue';
-    import { onMounted, ref } from 'vue';
+    import Carousel from '@/components/Carousel.vue';
+    import { ref, onMounted } from 'vue';
 
     const props = defineProps({
-        mediaUrl: {
-            type: String,
-        },
-        text: {
+        experience: {
             type: Object,
+            required: true,
         },
     });
+
     const textArray = ref([]);
 
     onMounted(() => {
-        const { title = '', subtitle = '', description = [] } = props.text;
-        textArray.value.push(title, subtitle, ...description);
+        const { title = '', subtitle = '', description = [] } = props.experience.text || {};
+        textArray.value = [title, subtitle, ...description];
     });
 </script>
+
 <style lang="scss">
     .experience-item > .text-image-container {
         flex-direction: row-reverse;
@@ -41,12 +49,10 @@
             }
 
             .line-0 {
-                // title
                 font-size: 2em;
             }
 
             .line-1 {
-                // subtitle
                 font-family: 'Montserrat Medium', sans-serif;
                 font-size: 1.2em;
             }
