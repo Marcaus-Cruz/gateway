@@ -62,6 +62,7 @@
         .btn {
             border: 0.5vmin solid white;
             margin: 0.5em;
+            user-select: none;
 
             &.expand-btn {
                 justify-self: center;
