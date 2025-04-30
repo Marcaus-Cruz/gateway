@@ -12,7 +12,8 @@
                 "Built 15 custom game engines for the HollywoodPlayer domain - including Scene Streak (Simon Says-style game using media stills) and Tile Swap (a timed challenge to unscramble TV/movie scenes), resulting in millions of playthroughs and increased user retention.",
                 "Designed and developed an internal admin search tool leveraging image recognition to store, categorize, and retrieve assets by keyword, face, object, or visual similarity using AWS - streamlining content discovery and management.",
                 "Maintained and extended scalable backend systems using AWS, ensuring seamless compatibility across browsers, mobile devices, and custom hardware.",
-                "Engineered reusable Vue components for the Clipology online/board game, supporting its growth to 180,000+ player accounts and widespread party gameplay while maintaining a 4.5 star Amazon rating."
+                "Engineered reusable Vue components for the Clipology online/board game, supporting its growth to 180,000+ player accounts and widespread party gameplay while maintaining a 4.5 star Amazon rating.",
+                "(Waiting for screenshots...)"
             ]
         }
     },
@@ -119,7 +120,8 @@
             "title": "Research Assistant (Oct 20 - Dec 21)",
             "subtitle": "Research Assistant under Professor Tarek Idriss - Western Washington University",
             "description": [
-                "Developed and tested multiple Python-based software models to simulate novel hardware security concepts. Designed and executed benchmarking scripts using machine learning techniques to evaluate performance on generated data. Utilized Weights & Biases (wandb) to record, visualize, and analyze results, comparing the effectiveness of implemented security measures against other types of Physical Unclonable Functions (PUFs)."
+                "Developed and tested multiple Python-based software models to simulate novel hardware security concepts. Designed and executed benchmarking scripts using machine learning techniques to evaluate performance on generated data. Utilized Weights & Biases (wandb) to record, visualize, and analyze results, comparing the effectiveness of implemented security measures against other types of Physical Unclonable Functions (PUFs).",
+                "(Waiting for screenshots...)"
             ]
         }
     },
