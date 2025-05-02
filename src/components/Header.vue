@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="header">
         <RouterLink to="/">
             <img class="logo" src="/img/MCLogoWhite.png" alt="logo" />
@@ -17,6 +17,7 @@
     import RouterButton from './RouterButton.vue';
     import { RouterLink } from 'vue-router';
     import DropdownMenu from './DropdownMenu.vue';
+    import NavButton from './NavButton.vue';
     import { ref } from 'vue';
 
     const experienceOptions = ref([
@@ -48,6 +49,37 @@
             // route: '/projects/chickySandieReview',
             route: '/projects',
         },
+    ]);
+</script> -->
+<template>
+    <div class="header">
+        <RouterLink to="/">
+            <img class="logo" src="/img/MCLogoWhite.png" alt="logo" />
+        </RouterLink>
+
+        <div class="nav-buttons">
+            <NavButton route="/">Home</NavButton>
+            <NavButton route="/experience" :options="experienceOptions">Experience</NavButton>
+            <NavButton route="/projects" :options="projectOptions">Projects</NavButton>
+            <NavButton route="/contact">Contact</NavButton>
+        </div>
+    </div>
+</template>
+
+<script setup>
+    import NavButton from './NavButton.vue';
+    import { ref } from 'vue';
+
+    const experienceOptions = ref([
+        { name: 'EE', route: '/experience/ee' },
+        { name: 'WWU - CAAML', route: '/experience/caaml' },
+        { name: 'WWU - Research', route: '/experience/puf' },
+        { name: 'Centurylink', route: '/experience/centurylink' },
+    ]);
+
+    const projectOptions = ref([
+        { name: 'Fruit Force', route: '/projects' },
+        { name: 'Chicky Sandie Review', route: '/projects' },
     ]);
 </script>
 
