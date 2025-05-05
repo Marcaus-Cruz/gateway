@@ -22,14 +22,14 @@
         "mediaUrl": "/img/icon-wwu.png",
         "text": {
             "title": "Frontend Engineer (Jan 21 - Dec 21)",
-            "subtitle": "Instructor Efficiency Tool (CAAML Web Tool) - Western Washington University",
+            "subtitle": "Department of Computer Science at Western Washington University",
             "description": [
                 "Developed an interactive web tool using JavaScript, Node, and Express to visualize machine learning algorithm outputs, significantly enhancing instructor efficiency in class scheduling. As the lead on front-end development, I routed and styled all web pages using HTML, CSS, and JavaScript and designed dynamic D3 visualizations to improve usability and overall user experience. In addition, I simplified project workflows using Trello boards and Agile Scrum practices, ensuring consistent progress and alignment with client goals."
             ]
         },
         "carousel": {
             "expandText": "Screenshots",
-            "collapseText": "Hide them",
+            "collapseText": "Hide",
             "carouselItems": [
                 {
                     "mediaUrl": "/img/caaml/caaml1.png",
@@ -118,10 +118,29 @@
         "mediaUrl": "/img/icon-wwu.png",
         "text": {
             "title": "Research Assistant (Oct 20 - Dec 21)",
-            "subtitle": "Research Assistant under Professor Tarek Idriss - Western Washington University",
+            "subtitle": "Department of Computer Science at Western Washington University",
             "description": [
-                "Developed and tested multiple Python-based software models to simulate novel hardware security concepts. Designed and executed benchmarking scripts using machine learning techniques to evaluate performance on generated data. Utilized Weights & Biases (wandb) to record, visualize, and analyze results, comparing the effectiveness of implemented security measures against other types of Physical Unclonable Functions (PUFs).",
-                "(Waiting for screenshots...)"
+                "Developed and tested multiple Python-based software models to simulate novel hardware security concepts. Designed and executed benchmarking scripts using machine learning techniques to evaluate performance on generated data. Utilized Weights & Biases (wandb) to record, visualize, and analyze results, comparing the effectiveness of implemented security measures against other types of Physical Unclonable Functions (PUFs)."
+            ]
+        },
+        "carousel": {
+            "expandText": "PUF Documents",
+            "collapseText": "Hide",
+            "carouselItems": [
+                {
+                    "mediaUrl": "/img/puf/mempuf.pdf",
+                    "text": [
+                        "",
+                        "Cumulative paper written by me to document and pass down knowledge of the PUFs and CLI testing options I created"
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/puf/cluster_jobs.pdf",
+                    "text": [
+                        "",
+                        "Concise rundown of how to run jobs on the cluster against PUFs for incoming researchers."
+                    ]
+                }
             ]
         }
     },
