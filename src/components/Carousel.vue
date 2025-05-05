@@ -8,11 +8,13 @@
             <button class="btn prev-btn" @click="prevImage">Prev</button>
             <div class="carousel-content">
                 <span class="counter">{{ `${activeIndex + 1}/${totalItems}` }}</span>
-                <TextImageContainer
-                    v-if="currentItem"
-                    :mediaUrl="currentItem.mediaUrl"
-                    :text="currentItem.text"
-                />
+                <TextImageContainer v-if="currentItem" :text="currentItem.text">
+                    <MediaRenderer
+                        :type="currentItem.type"
+                        :mediaUrl="currentItem.mediaUrl"
+                        :alt="currentItem.alt || ''"
+                    />
+                </TextImageContainer>
             </div>
 
             <button class="btn next-btn" @click="nextImage">Next</button>
@@ -23,6 +25,7 @@
 <script setup>
     import { ref, computed } from 'vue';
     import TextImageContainer from '@/components/TextImageContainer.vue';
+    import MediaRenderer from '@/components/MediaRenderer.vue';
 
     const props = defineProps({
         carouselItems: {
@@ -84,12 +87,13 @@
                 flex: 0 0 80%;
                 padding: 1em;
                 max-width: 80%;
+                min-height: 50vh;
                 background: rgba(white, 0.25);
 
                 .text-image-container {
                     flex-direction: column-reverse;
 
-                    .image-container img {
+                    .media-renderer > * {
                         max-width: 90%;
                     }
                 }
@@ -112,7 +116,7 @@
                 .carousel-content {
                     max-width: 100%;
 
-                    .text-image-container .image-container img {
+                    .media-renderer > * {
                         max-width: 90vw;
                     }
                 }
