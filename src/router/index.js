@@ -5,6 +5,7 @@ import ContactView from '@/views/ContactView.vue';
 import ResumeView from '@/views/ResumeView.vue';
 import NotFoundView from '@/views/NotFoundView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
+import Casino from '@/components/Casino.vue';
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,6 +44,10 @@ const router = createRouter({
             path: '/:catchAll(.*)',
             name: 'notFound',
             component: NotFoundView,
+        },
+        {
+            path: '/casino',
+            component: Casino,
         },
     ],
 });
