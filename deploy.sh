@@ -3,6 +3,14 @@
 # Abort on errors
 set -e
 
+git push
+git push github dev
+
+git checkout prod
+git pull origin dev
+git push
+git push github prod
+
 # Build your app
 npm run build-only
 
@@ -27,3 +35,5 @@ git push -f origin master:gh-pages
 
 # Go back
 cd -
+
+git checkout dev
