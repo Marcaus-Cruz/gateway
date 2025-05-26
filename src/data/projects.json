@@ -1,33 +1,48 @@
 {
     "chickySandieReview": {
-        "expandText": "Screenshots from Android App",
-        "collapseText": "Hide",
-        "carouselItems": [
-            {
-                "mediaUrl": "/img/csr/csr2.jpg",
-                "text": [
-                    "[Creating a New Review]",
-                    "The point of this Android App was to take the time out of calculating and formatting for social media posts.",
-                    "After clicking the + widget, user is met with a screen to start reviewing.",
-                    "This page contains everything needed to start and finish a review to get formatted after input."
-                ]
-            },
-            {
-                "mediaUrl": "/img/csr/csr3.jpg",
-                "text": [
-                    "[Rating Phase]",
-                    "Both categorical and overall ratings are calculated through inputs. Click +/- to increment by 0.5 points up to 10.",
-                    "There is a section to write thoughts at the end once user has finished inputting thoughts on the categories."
-                ]
-            },
-            {
-                "mediaUrl": "/img/csr/csr4.jpg",
-                "text": [
-                    "[Extras]",
-                    "Sometimes there are extras that the base chicken sandwich does not contain (i.e. pickles, coleslaw, etc.).",
-                    "Dynamically add these throughout the Rating Phase to add to the 'Alternative' Overall Score as to not overlap with standard sandwiches."
-                ]
-            }
-        ]
+        "organization": "csr",
+        "mediaUrl": "/img/icon-chickysandie.png",
+        "text": {
+            "title": "Chicky Sandie Reviews",
+            "subtitle": "(Android Version)",
+            "description": [
+                "Many years ago, my obsession of chicken sandwiches led me to creating a fun little review page that my friends and I could laugh at.",
+                "After posting about 6 reviews, I realized that it was taking me 45+ minutes to create each post after doing manual rating calculations, image taking, and text formatting.",
+                "Thus, my Java experience led me to create this app in Android Studio in order to save loads of time posting these reviews.",
+                "Sadly, the APK has not held up well over the years and some features have started to fail me.",
+                "Rather than untangling a mess I made all those years ago - I'm in the process of creating a web based app that anyone will be able to use."
+            ]
+        },
+        "carousel": {
+            "expandText": "Screenshots from Android App",
+            "collapseText": "Hide",
+            "carouselItems": [
+                {
+                    "mediaUrl": "/img/csr/csr2.jpg",
+                    "text": [
+                        "[Creating a New Review]",
+                        "The point of this Android App was to take the time out of calculating and formatting for social media posts.",
+                        "After clicking the + widget, user is met with a screen to start reviewing.",
+                        "This page contains everything needed to start and finish a review to get formatted after input."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/csr/csr3.jpg",
+                    "text": [
+                        "[Rating Phase]",
+                        "Both categorical and overall ratings are calculated through inputs. Click +/- to increment by 0.5 points up to 10.",
+                        "There is a section to write thoughts at the end once user has finished inputting thoughts on the categories."
+                    ]
+                },
+                {
+                    "mediaUrl": "/img/csr/csr4.jpg",
+                    "text": [
+                        "[Extras]",
+                        "Sometimes there are extras that the base chicken sandwich does not contain (i.e. pickles, coleslaw, etc.).",
+                        "Dynamically add these throughout the Rating Phase to add to the 'Alternative' Overall Score as to not overlap with standard sandwiches."
+                    ]
+                }
+            ]
+        }
     }
 }
