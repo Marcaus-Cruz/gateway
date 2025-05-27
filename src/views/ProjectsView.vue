@@ -1,43 +1,59 @@
 <template>
-    <section class="view projects">
-        <div class="projects-text warning">:(</div>
-        <div class="projects-text title">Working on them</div>
-        <div class="projects-text subtitle">I'll have them to showcase very soon!</div>
-        <RouterButton route="/resume">But you can check out my resume!</RouterButton>
-    </section>
+    <div :class="`view projects ${projectId || 'no-project'}`">
+        <div v-show="!projectId" class="no-project-container">
+            <div class="projects-text subtitle">More projects to showcase very soon.</div>
+            <RouterButton route="/resume">But you can check out my resume!</RouterButton>
+            <RouterButton route="/casino">Le Casino</RouterButton>
+            <RouterButton route="/projects/chickySandieReview">Chicky Sandie Reviews</RouterButton>
+        </div>
+        <projectOnScreen v-if="projectId" />
+    </div>
 </template>
 
 <script setup>
     import RouterButton from '@/components/RouterButton.vue';
+    import ProjectItem from '@/components/ExperienceItem.vue';
+    import DataProjects from '@/data/projects.json';
+    import ChickyReviewProject from '../components/ChickyReviewProject.vue';
+    import { computed, ref, watch, shallowRef } from 'vue';
+    import { useRoute } from 'vue-router';
+    import CasinoProject from '@/components/CasinoProject.vue';
+
+    const route = useRoute();
+    const projectId = computed(() => route.params.id);
+
+    const projectIdsToComponents = Object.freeze({
+        casino: CasinoProject,
+        chickySandieReview: ChickyReviewProject,
+    });
+
+    const projectOnScreen = computed(() => projectIdsToComponents[projectId.value]);
+
+    // const projectOnScreen = shallowRef(undefined);
+    // const getProjectOnScreen = computed(() => projectIdsToComponents[projectId.value]);
+    // watch(
+    //     () => projectId.value,
+    //     () => {
+    //         console.log(`[ProjectsView][watch]: "${projectId.value}"`);
+    //         projectOnScreen.value = getProjectOnScreen.value;
+    //     },
+    //     { immediate: true }
+    // );
 </script>
 
 <style lang="scss" scoped>
     .view.projects {
         @include flex-container(column, nowrap, center, center);
-        margin: 10%;
         text-align: center;
-
-        .projects-text {
-            font-family: 'Montserrat Bold', sans-serif;
-
-            &.warning {
-                color: red;
-                font-size: 10vmin;
-            }
-
-            &:not(:first-child) {
-                margin: 1em auto;
-            }
-
-            &.subtitle {
-                font-family: 'Montserrat Regular', sans-serif;
-            }
-        }
 
         .btn {
             color: var(--color-primary);
             background-color: rgba(255, 255, 255, 0.1);
             margin-top: 1em;
+        }
+
+        &.no-projects {
+            margin: 10%;
         }
     }
 </style>
