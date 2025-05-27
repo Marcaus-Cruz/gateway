@@ -6,7 +6,7 @@
             <RouterButton route="/projects/casino">Le Casino</RouterButton>
             <RouterButton route="/projects/chickySandieReview">Chicky Sandie Reviews</RouterButton>
         </div>
-        <projectOnScreen v-if="projectId" />
+        <projectOnScreen v-if="projectId" :projectId="projectId" />
     </div>
 </template>
 

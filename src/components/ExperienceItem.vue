@@ -4,10 +4,10 @@
             <TextImageContainer :mediaUrl="experience.mediaUrl" :text="textArray" />
         </section>
         <Carousel
-            v-if="experience.hasCarousel"
-            :expandText="experience.carouselExpandText"
-            :collapseText="experience.carouselCollapseText"
-            :carouselItems="experience.carouselItems"
+            v-if="experience.carousel"
+            :expandText="experience.carousel.expandText"
+            :collapseText="experience.carousel.collapseText"
+            :carouselItems="experience.carousel.carouselItems"
         />
     </div>
 </template>

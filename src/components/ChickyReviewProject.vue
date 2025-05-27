@@ -12,12 +12,15 @@
     import { ref, watch, computed } from 'vue';
     import { useRoute } from 'vue-router';
 
-    const route = useRoute();
-
-    const experienceId = computed(() => route.params.id);
+    const props = defineProps({
+        projectId: {
+            type: String,
+            required: true,
+        },
+    });
 
     const projectData = computed(() => {
-        const data = DataProjects[experienceId.value];
+        const data = DataProjects[props.projectId];
         console.log({ data });
 
         return data;

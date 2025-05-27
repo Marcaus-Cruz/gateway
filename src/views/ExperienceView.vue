@@ -44,10 +44,7 @@
                 mediaUrl,
                 text,
                 organization,
-                hasCarousel: !!carousel,
-                carouselExpandText: carousel ? carousel.expandText : '',
-                carouselCollapseText: carousel ? carousel.collapseText : '',
-                carouselItems: carousel ? carousel.carouselItems : [],
+                carousel,
             })
         )
     );
