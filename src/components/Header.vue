@@ -43,6 +43,7 @@
 
         background-color: var(--color-background);
         overflow-x: clip;
+        z-index: var(--header-z-index);
 
         .logo {
             max-height: var(--header-height);
