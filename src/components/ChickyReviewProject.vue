@@ -5,12 +5,9 @@
 </template>
 
 <script setup>
-    import RouterButton from '@/components/RouterButton.vue';
-    import ProjectItem from './ExperienceItem.vue';
     import DataProjects from '@/data/projects.json';
-
-    import { ref, watch, computed } from 'vue';
-    import { useRoute } from 'vue-router';
+    import { computed } from 'vue';
+    import ProjectItem from './ExperienceItem.vue';
 
     const props = defineProps({
         projectId: {
@@ -19,12 +16,7 @@
         },
     });
 
-    const projectData = computed(() => {
-        const data = DataProjects[props.projectId];
-        console.log({ data });
-
-        return data;
-    });
+    const projectData = computed(() => DataProjects[props.projectId]);
 </script>
 
 <style lang="scss">
@@ -38,6 +30,10 @@
         .carousel-container .carousel .carousel-content .text-image-container {
             flex-direction: row;
 
+            @media (orientation: portrait) {
+                flex-direction: column;
+            }
+
             .text-container,
             .image-container {
                 flex: 1;
@@ -45,6 +41,11 @@
 
             .image-container .media-renderer img {
                 max-height: 50vh;
+
+                @media (orientation: portrait) {
+                    max-height: unset;
+                    max-width: 65%;
+                }
             }
         }
     }
