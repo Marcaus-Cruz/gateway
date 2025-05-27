@@ -3,7 +3,7 @@
         <div v-show="!projectId" class="no-project-container">
             <div class="projects-text subtitle">More projects to showcase very soon.</div>
             <RouterButton route="/resume">But you can check out my resume!</RouterButton>
-            <RouterButton route="/casino">Le Casino</RouterButton>
+            <RouterButton route="/projects/casino">Le Casino</RouterButton>
             <RouterButton route="/projects/chickySandieReview">Chicky Sandie Reviews</RouterButton>
         </div>
         <projectOnScreen v-if="projectId" />
@@ -12,10 +12,8 @@
 
 <script setup>
     import RouterButton from '@/components/RouterButton.vue';
-    import ProjectItem from '@/components/ExperienceItem.vue';
-    import DataProjects from '@/data/projects.json';
     import ChickyReviewProject from '../components/ChickyReviewProject.vue';
-    import { computed, ref, watch, shallowRef } from 'vue';
+    import { computed } from 'vue';
     import { useRoute } from 'vue-router';
     import CasinoProject from '@/components/CasinoProject.vue';
 
@@ -28,17 +26,6 @@
     });
 
     const projectOnScreen = computed(() => projectIdsToComponents[projectId.value]);
-
-    // const projectOnScreen = shallowRef(undefined);
-    // const getProjectOnScreen = computed(() => projectIdsToComponents[projectId.value]);
-    // watch(
-    //     () => projectId.value,
-    //     () => {
-    //         console.log(`[ProjectsView][watch]: "${projectId.value}"`);
-    //         projectOnScreen.value = getProjectOnScreen.value;
-    //     },
-    //     { immediate: true }
-    // );
 </script>
 
 <style lang="scss" scoped>
@@ -54,6 +41,10 @@
 
         &.no-projects {
             margin: 10%;
+        }
+
+        &.casino {
+            margin: unset;
         }
     }
 </style>

@@ -1,4 +1,3 @@
-import Casino from '@/components/CasinoProject.vue';
 import ContactView from '@/views/ContactView.vue';
 import ExperienceView from '@/views/ExperienceView.vue';
 import HomeView from '@/views/HomeView.vue';
@@ -49,10 +48,6 @@ const router = createRouter({
             path: '/:catchAll(.*)',
             name: 'notFound',
             component: NotFoundView,
-        },
-        {
-            path: '/casino',
-            component: Casino,
         },
     ],
 });
