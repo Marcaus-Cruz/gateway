@@ -4,9 +4,9 @@
             <div v-for="(line, index) in text" :key="index" :class="`line line-${index}`">
                 {{ line }}
             </div>
-            <slot></slot>
         </div>
         <div class="image-container">
+            <slot></slot>
             <img v-show="mediaUrl && type === MEDIA_TYPES.img" :src="mediaUrl" :alt="alt" />
         </div>
     </div>
