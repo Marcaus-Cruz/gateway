@@ -34,5 +34,18 @@
                 max-height: 20vh;
             }
         }
+
+        .carousel-container .carousel .carousel-content .text-image-container {
+            flex-direction: row;
+
+            .text-container,
+            .image-container {
+                flex: 1;
+            }
+
+            .image-container .media-renderer img {
+                max-height: 50vh;
+            }
+        }
     }
 </style>
