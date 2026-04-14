@@ -43,6 +43,11 @@
                     ]
                 }
             ]
+        },
+        "webApp": {
+            "title": "Chicky Sandie Reviews (Web App)",
+            "description": "The web-based successor to the Android app — built so anyone can use it from any device.",
+            "url": "https://csr-web.vercel.app/"
         }
     },
     "casino": {}

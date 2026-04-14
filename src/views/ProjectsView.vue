@@ -12,7 +12,7 @@
 
 <script setup>
     import RouterButton from '@/components/RouterButton.vue';
-    import ChickyReviewProject from '../components/ChickyReviewProject.vue';
+    import ChickyReviewProject from '@/components/ChickyReviewProject.vue';
     import { computed } from 'vue';
     import { useRoute } from 'vue-router';
     import CasinoProject from '@/components/CasinoProject.vue';
