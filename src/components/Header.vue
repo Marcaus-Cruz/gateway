@@ -26,7 +26,6 @@
 
     const projectOptions = ref([
         { name: 'Le Casino', route: '/projects/casino' },
-        { name: 'Fruit Force', route: '/projects/fruit-force' },
         { name: 'Chicky Sandie Review', route: '/projects/chickySandieReview' },
     ]);
 </script>
